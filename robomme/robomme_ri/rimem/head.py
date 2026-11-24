@@ -1,7 +1,6 @@
 """Shared 35-parameter head: supplement Eqs. 8–13 and Table 3."""
 
 import numpy as np
-from ..baselines import ABLATIONS
 
 
 def initial_parameters():
@@ -11,47 +10,26 @@ def initial_parameters():
     return W, beta
 
 
-def readout(W, beta, query, features, *, xp=np, ablation="full", random_weights=None):
-    """Differentiable NumPy/JAX implementation; batch-one query and N x 4 facts."""
-    if ablation not in ABLATIONS:
-        raise ValueError(ablation)
+def readout(W, beta, query, features, *, xp=np):
+    """Map the six-dimensional query and N x 4 evidence to bounded priors."""
     y = query @ W + beta
     weights = xp.logaddexp(y[:4], 0.0)
-    if ablation == "fixed_weights":
-        weights = xp.asarray([0.45, 2.4, 0.15, 0.2])
-    elif ablation == "random_weights":
-        if random_weights is None:
-            raise ValueError(
-                "Pass episode-seeded random weights, held fixed within the episode"
-            )
-        weights = xp.asarray(random_weights)
-    signs = xp.asarray([1.0, -1.0, -1.0, 1.0])
-    for i, name in enumerate(
-        ("no_relevance", "no_irrelevance", "no_observability", "no_validity")
-    ):
-        if ablation == name:
-            signs = signs * xp.asarray([0.0 if j == i else 1.0 for j in range(4)])
-    priorities = features @ (weights * signs)
+    priorities = features @ (weights * xp.asarray([1.0, -1.0, -1.0, 1.0]))
     full_bias = 0.6 * xp.tanh(priorities / 0.6)
-    fallback_bias = -0.6 * xp.tanh(weights[1] * (-signs[1]) * features[:, 1] / 0.6)
+    fallback_bias = -0.6 * xp.tanh(weights[1] * features[:, 1] / 0.6)
     uncertain = query[4] < 0.6
     bias = xp.where(uncertain, fallback_bias, full_bias)
     gate = xp.where(uncertain | ~xp.any(features != 0), 1.0, 1.0 + 0.08 * xp.tanh(y[4]))
-    if ablation == "no_gate":
-        gate = xp.asarray(1.0)
-    if ablation in ("original", "query_only"):
-        bias, gate = xp.zeros_like(bias), xp.asarray(1.0)
     return bias, gate
 
 
-def numpy_readout(query, features, parameters=None, **kwargs):
+def numpy_readout(query, features, parameters=None):
     W, beta = initial_parameters() if parameters is None else parameters
     return readout(
         W,
         beta,
         np.asarray(query, np.float32),
         np.asarray(features, np.float32),
-        **kwargs,
     )
 
 

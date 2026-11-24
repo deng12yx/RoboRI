@@ -1,8 +1,4 @@
-"""Complete RoboMME method inventory (main paper Table 2 and §5.1).
-
-Registry describes actual inference variants, including Qwen vs oracle. A method
-name never silently substitutes another backbone or a randomly initialized model.
-"""
+"""Model variants from main-paper Table 2 and Section 5.1."""
 
 from dataclasses import dataclass
 
@@ -15,7 +11,6 @@ class Method:
     native: str
     subgoals: str = "native"
     rimem: bool = False
-    history_control: str | None = None
 
 
 METHODS = {}
@@ -70,6 +65,8 @@ for name, label, cat, native in (
         if name in ("pi05", "memer")
         else "simplememvla"
         if name == "simplememvla"
+        else "ponderpounce"
+        if name == "ponderpounce"
         else "official"
     )
     METHODS[name] = Method(
@@ -81,31 +78,12 @@ for base in ("framesamp-modul", "tokendrop-modul", "simplememvla"):
         m.label + "+RI-Mem", m.category, m.backend, m.native, m.subgoals, True
     )
 
-# Supplement Table 6: 11 configurations (including the original policy).
-ABLATIONS = (
-    "original",
-    "query_only",
-    "reweight_only",
-    "no_gate",
-    "no_relevance",
-    "no_irrelevance",
-    "no_observability",
-    "no_validity",
-    "fixed_weights",
-    "random_weights",
-    "full",
+# Table 2 reports 26 baselines; Section 5.1 additionally names these two.
+ADDITIONAL_BASELINES = ("smolvla", "openvla-oft")
+PAPER_BASELINES = tuple(
+    name
+    for name, method in METHODS.items()
+    if not method.rimem and name not in ADDITIONAL_BASELINES
 )
-
-MAIN_METHODS = tuple(METHODS)
-for base in ("framesamp-modul", "tokendrop-modul", "simplememvla"):
-    m = METHODS[base]
-    for control in ("no-history", "shuffled-history", "oracle-mem"):
-        METHODS[base + "+" + control] = Method(
-            m.label + " / " + control,
-            m.category,
-            m.backend,
-            m.native,
-            m.subgoals,
-            False,
-            control,
-        )
+RIMEM_BACKBONES = ("framesamp-modul", "tokendrop-modul", "simplememvla")
+MAIN_METHODS = PAPER_BASELINES + tuple(base + "+ri-mem" for base in RIMEM_BACKBONES)

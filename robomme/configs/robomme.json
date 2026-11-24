@@ -117,32 +117,32 @@
       "qwen_model": "${QWEN_MODEL}"
     },
     "ponderpounce": {
-      "endpoint": "ws://127.0.0.1:8808",
-      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
-      "service_contract": "robomme-challenge-v1",
-      "official_adapter_required": true
+      "checkpoint": "${MODEL_ROOT}/others/ponderpounce-9b-robomme",
+      "source_root": "${LAPSE_ROOT}/PonderPounce",
+      "python": "${LAPSE_ROOT}/PonderPounce/.venv/bin/python",
+      "exec_horizon": 1
     },
     "pi05": {
       "checkpoint": "${MODEL_ROOT}/pi05_baseline/pi05_baseline/79999",
       "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
     },
     "sam2act": {
-      "endpoint": "ws://127.0.0.1:8809",
+      "endpoint": "ws://127.0.0.1:8808",
       "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
       "exec_horizon": 1
     },
     "diffusion-policy": {
-      "endpoint": "ws://127.0.0.1:8810",
+      "endpoint": "ws://127.0.0.1:8809",
       "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
       "exec_horizon": 8
     },
     "smolvla": {
-      "endpoint": "http://127.0.0.1:8811",
+      "endpoint": "http://127.0.0.1:8810",
       "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
       "exec_horizon": 50
     },
     "openvla-oft": {
-      "endpoint": "http://127.0.0.1:8812",
+      "endpoint": "http://127.0.0.1:8811",
       "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
     },
     "framesamp-modul+ri-mem": {
@@ -151,8 +151,7 @@
       "head": "${SUBMIT_ROOT}/checkpoints/framesamp-modul.npz",
       "qwen_model": "${QWEN_MODEL}",
       "qwen_device": "cuda:0",
-      "plan_cache": "${SUBMIT_ROOT}/outputs/scq_plans",
-      "ablation": "full"
+      "plan_cache": "${SUBMIT_ROOT}/outputs/scq_plans"
     },
     "tokendrop-modul+ri-mem": {
       "checkpoint": "${MODEL_ROOT}/perceptual-tokendrop-modul/79999",
@@ -160,8 +159,7 @@
       "head": "${SUBMIT_ROOT}/checkpoints/tokendrop-modul.npz",
       "qwen_model": "${QWEN_MODEL}",
       "qwen_device": "cuda:0",
-      "plan_cache": "${SUBMIT_ROOT}/outputs/scq_plans",
-      "ablation": "full"
+      "plan_cache": "${SUBMIT_ROOT}/outputs/scq_plans"
     },
     "simplememvla+ri-mem": {
       "checkpoint": "${MODEL_ROOT}/others/simplememvla_robomme",
@@ -169,59 +167,36 @@
       "head": "${SUBMIT_ROOT}/checkpoints/simplememvla.npz",
       "qwen_model": "${QWEN_MODEL}",
       "qwen_device": "cuda:0",
-      "plan_cache": "${SUBMIT_ROOT}/outputs/scq_plans",
-      "ablation": "full"
-    },
-    "framesamp-modul+no-history": {
-      "checkpoint": "${MODEL_ROOT}/perceptual-framesamp-modul/79999",
-      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
-    },
-    "framesamp-modul+shuffled-history": {
-      "checkpoint": "${MODEL_ROOT}/perceptual-framesamp-modul/79999",
-      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
-    },
-    "framesamp-modul+oracle-mem": {
-      "checkpoint": "${MODEL_ROOT}/perceptual-framesamp-modul/79999",
-      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
-    },
-    "tokendrop-modul+no-history": {
-      "checkpoint": "${MODEL_ROOT}/perceptual-tokendrop-modul/79999",
-      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
-    },
-    "tokendrop-modul+shuffled-history": {
-      "checkpoint": "${MODEL_ROOT}/perceptual-tokendrop-modul/79999",
-      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
-    },
-    "tokendrop-modul+oracle-mem": {
-      "checkpoint": "${MODEL_ROOT}/perceptual-tokendrop-modul/79999",
-      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
-    },
-    "simplememvla+no-history": {
-      "checkpoint": "${MODEL_ROOT}/others/simplememvla_robomme",
-      "python": "${LAPSE_ROOT}/.venv-simplememvla/bin/python"
-    },
-    "simplememvla+shuffled-history": {
-      "checkpoint": "${MODEL_ROOT}/others/simplememvla_robomme",
-      "python": "${LAPSE_ROOT}/.venv-simplememvla/bin/python"
-    },
-    "simplememvla+oracle-mem": {
-      "checkpoint": "${MODEL_ROOT}/others/simplememvla_robomme",
-      "python": "${LAPSE_ROOT}/.venv-simplememvla/bin/python"
+      "plan_cache": "${SUBMIT_ROOT}/outputs/scq_plans"
     }
   },
   "methods": [
-    "framesamp-modul+no-history",
-    "framesamp-modul+shuffled-history",
-    "framesamp-modul+oracle-mem",
-    "tokendrop-modul+no-history",
-    "tokendrop-modul+shuffled-history",
-    "tokendrop-modul+oracle-mem",
-    "simplememvla+no-history",
-    "simplememvla+shuffled-history",
-    "simplememvla+oracle-mem",
+    "framesamp-context",
     "framesamp-modul",
+    "framesamp-expert",
+    "oft-framesamp-context",
+    "tokendrop-context",
     "tokendrop-modul",
+    "tokendrop-expert",
+    "oft-tokendrop-context",
+    "retrieval-fs-mod",
+    "simplesg-qwen",
+    "simplesg-oracle",
+    "oft-simplesg-qwen",
+    "groundedsg-qwen",
+    "groundedsg-oracle",
+    "oft-groundedsg-qwen",
+    "ttt-context",
+    "ttt-expert",
     "simplememvla",
+    "sam2act-plus",
+    "hamlet",
+    "memoryvla",
+    "memer",
+    "ponderpounce",
+    "pi05",
+    "sam2act",
+    "diffusion-policy",
     "framesamp-modul+ri-mem",
     "tokendrop-modul+ri-mem",
     "simplememvla+ri-mem"
@@ -274,7 +249,27 @@
     26,
     27,
     28,
-    29
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
   ],
   "conditions": [
     "clean",

@@ -1,10 +1,11 @@
-Place separately calibrated heads here:
+# Calibrated RI-Mem heads
+
+Provide one calibrated head per backbone:
 
 - `framesamp-modul.npz`
 - `tokendrop-modul.npz`
 - `simplememvla.npz`
 
-Use `robomme-ri calibrate` to generate them. The loader checks the backbone and
-calibration metadata. Initial parameters are not accepted as calibrated weights.
-No trained RI-Mem weights were present in the supplied repository when this
-submission package was assembled.
+Generate these with `robomme-ri calibrate`. The loader validates backbone identity,
+parameter dimensions and calibration metadata. Initialization-only heads are
+rejected for enhanced evaluation. Model weights are not distributed here.

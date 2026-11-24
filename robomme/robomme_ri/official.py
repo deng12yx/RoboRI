@@ -339,47 +339,6 @@ class SAMPolicy:
         self.ws.close()
 
 
-class ChallengePolicy:
-    """Explicit standard challenge infer/reset service, e.g. external PonderPounce.
-
-    Server must implement this contract or expose a custom factory. This wrapper
-    does not claim an arbitrary official HTTP API is automatically compatible.
-    """
-
-    action_space = "joint_angle"
-
-    def __init__(self, method, cfg):
-        if cfg.get("service_contract") != "robomme-challenge-v1":
-            raise ValueError(
-                f"{method}: configure its official adapter factory, or an explicit robomme-challenge-v1 bridge"
-            )
-        self.ws = WebSocket(cfg["endpoint"])
-        self.metadata = {
-            "native": method,
-            "service_contract": "robomme-challenge-v1",
-            **self.ws.metadata,
-        }
-
-    def reset(self, spec, obs, info, env):
-        self.ws.call({"reset": True})
-        self.goal = instruction(info)
-        self.first = True
-        self.pending = dict(obs)
-
-    def observe(self, obs):
-        for k, v in obs.items():
-            if k.endswith("_list"):
-                self.pending.setdefault(k, []).extend(v)
-
-    def act(self, obs, info):
-        inp = {**self.pending, "is_first_step": self.first, "task_goal": [self.goal]}
-        self.pending, self.first = {}, False
-        return np.asarray(self.ws.call(inp)["actions"], np.float32)
-
-    def close(self):
-        self.ws.close()
-
-
 def create_official(method, cfg):
     if method.startswith("oft-") or method == "openvla-oft":
         return OFTPolicy(method, cfg)
@@ -391,4 +350,4 @@ def create_official(method, cfg):
         return HAMLETPolicy(cfg)
     if method in ("sam2act", "sam2act-plus"):
         return SAMPolicy(method, cfg)
-    return ChallengePolicy(method, cfg)
+    raise ValueError(f"No official service adapter for {method}")

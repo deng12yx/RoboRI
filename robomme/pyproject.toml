@@ -10,8 +10,8 @@ requires-python = ">=3.10"
 dependencies = ["numpy>=1.24"]
 
 [project.optional-dependencies]
-notebook = ["nbformat", "nbclient", "ipykernel", "pandas", "matplotlib", "pillow", "imageio[ffmpeg]"]
-test = ["pytest", "torch", "opencv-python-headless"]
+notebook = ["nbformat", "ipykernel", "pandas", "pillow"]
+video = ["imageio[ffmpeg]"]
 vlm = ["torch", "transformers>=4.57", "pillow"]
 clients = ["requests", "websockets", "msgpack", "opencv-python-headless", "scipy"]
 
@@ -20,6 +20,3 @@ robomme-ri = "robomme_ri.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["robomme_ri*"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]

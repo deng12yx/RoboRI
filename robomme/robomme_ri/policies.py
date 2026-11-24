@@ -36,26 +36,20 @@ class MMEPolicy:
         rimem=None,
         subgoals=None,
         retrieval=None,
-        control=None,
     ):
         from mme_vla_suite.policies import policy_config
         from mme_vla_suite.training import config
 
         self.method = METHODS[method]
         self.rimem, self.subgoals, self.retrieval = rimem, subgoals, retrieval
-        self.control = control
-        self.env_kwargs = (
-            {"include_maniskill_obs": True}
-            if control and control.kind == "oracle-mem"
-            else {}
-        )
+        self.env_kwargs = {}
         self.detach = None
         if (
             self.method.native != "pi05-no-memory"
             and not (Path(checkpoint).parent / "history_config.txt").is_file()
         ):
             raise FileNotFoundError(f"Missing history_config.txt beside {checkpoint}")
-        if rimem or control:
+        if rimem:
             from .rimem.mme import install
 
             install()
@@ -91,15 +85,10 @@ class MMEPolicy:
         self.inner._rng = jax.random.key(spec.model_seed)
         self.goal, self.env = instruction(info), env
         self.count = 0
-        if self.control:
-            from .history_controls import attach_mme
-
-            self.control.reset(spec.model_seed, env)
-            self.detach = attach_mme(self.inner, self.control)
         if self.rimem:
             from .rimem.mme import attach
 
-            self.rimem.reset(self.goal, spec.model_seed)
+            self.rimem.reset(self.goal)
             self.detach = attach(self.inner, self.rimem, self.method.native)
         if self.subgoals:
             self.subgoals.reset(spec, obs, self.goal)
@@ -107,8 +96,6 @@ class MMEPolicy:
 
     def observe(self, obs, initial=False):
         fs = frames(obs)
-        if self.control:
-            self.control.observe(obs)
         if self.rimem:
             for f, w, s in fs:
                 self.rimem.observe(f)
@@ -173,20 +160,14 @@ class MMEPolicy:
 class SimpleMemPolicy:
     action_space = "joint_angle"
 
-    def __init__(self, checkpoint, rimem=None, control=None):
+    def __init__(self, checkpoint, rimem=None):
         import torch
         from transformers import AutoProcessor
         from robomme_sim.policy import get_vla, RoboMMEPolicy
         from robomme_sim.batched_policy import BatchedEvalPolicy
 
         self.torch, self.rimem = torch, rimem
-        self.control = control
-        self.control_detach = None
-        self.env_kwargs = (
-            {"include_maniskill_obs": True}
-            if control and control.kind == "oracle-mem"
-            else {}
-        )
+        self.env_kwargs = {}
         vla, unnorm, norm = get_vla(
             str(checkpoint), "bfloat16", attn_implementation="sdpa"
         )
@@ -226,25 +207,16 @@ class SimpleMemPolicy:
         }
 
     def reset(self, spec, obs, info, env):
-        if self.control_detach:
-            self.control_detach()
         self.buffer.reset()
         self.torch.manual_seed(spec.model_seed)
         self.torch.cuda.manual_seed_all(spec.model_seed)
         self.goal = instruction(info)
-        if self.control:
-            from .history_controls import attach_simple
-
-            self.control.reset(spec.model_seed, env)
-            self.control_detach = attach_simple(self.buffer, self.control)
         if self.rimem:
-            self.rimem.reset(self.goal, spec.model_seed)
+            self.rimem.reset(self.goal)
             self.bridge.clear()
         self.observe(obs)
 
     def observe(self, obs):
-        if self.control:
-            self.control.observe(obs)
         for f, w, s in frames(obs):
             self.buffer.observe(
                 {"observation.images.front": f, "observation.images.wrist": w}
@@ -255,13 +227,7 @@ class SimpleMemPolicy:
 
     def act(self, obs, info):
         with self.torch.inference_mode():
-            if self.control and self.control.kind == "oracle-mem":
-                self.buffer._patch_feat_cache.clear()
             processed = self.buffer._prepare_inputs(self.goal)
-            if self.control:
-                from .history_controls import simple_processed
-
-                processed = simple_processed(processed, self.control)
             if self.rimem:
                 from .rimem.simplememvla import video_keys
 
@@ -278,8 +244,6 @@ class SimpleMemPolicy:
         return np.asarray(actions, np.float32)
 
     def close(self):
-        if self.control_detach:
-            self.control_detach()
         if self.bridge:
             self.bridge.close()
         if self.rimem:
@@ -299,11 +263,6 @@ def create(method, cfg):
     if cfg.get("factory"):
         return load_factory(cfg["factory"], method=method, config=cfg)
     ri = None
-    control = None
-    if m.history_control:
-        from .history_controls import Control
-
-        control = Control(m.history_control)
     if m.rimem:
         from .rimem.runtime import RIMem
         from .rimem.vlm import QwenSCQ
@@ -312,7 +271,11 @@ def create(method, cfg):
         scq = QwenSCQ(
             cfg["qwen_model"], cfg.get("qwen_device", "cuda:0"), cfg.get("plan_cache")
         )
-        ri = RIMem(base, cfg["head"], scq, cfg.get("ablation", "full"))
+        ri = RIMem(base, cfg["head"], scq)
+    if m.backend == "ponderpounce":
+        from .ponderpounce import PonderPouncePolicy
+
+        return PonderPouncePolicy(cfg)
     if m.backend == "mme":
         subgoals = None
         if m.subgoals == "qwen":
@@ -324,9 +287,9 @@ def create(method, cfg):
             from .retrieval import SigLIPRetrieval
 
             retrieval = SigLIPRetrieval(cfg["retrieval_encoder"])
-        return MMEPolicy(method, cfg["checkpoint"], ri, subgoals, retrieval, control)
+        return MMEPolicy(method, cfg["checkpoint"], ri, subgoals, retrieval)
     if m.backend == "simplememvla":
-        return SimpleMemPolicy(cfg["checkpoint"], ri, control)
+        return SimpleMemPolicy(cfg["checkpoint"], ri)
     from .official import create_official
 
     return create_official(method, cfg)

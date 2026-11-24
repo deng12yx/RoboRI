@@ -4,12 +4,12 @@ import numpy as np
 from .evidence import EvidenceIndex, key_features
 from .head import load_head, numpy_readout
 from .perception import HSVRegions
-from .query import QueryTracker, Plan, Subgoal
+from .query import QueryTracker
 
 
 class RIMem:
-    def __init__(self, backbone, head_path, scq, ablation="full", detector=None):
-        self.backbone, self.scq, self.ablation = backbone, scq, ablation
+    def __init__(self, backbone, head_path, scq, detector=None):
+        self.backbone, self.scq = backbone, scq
         self.parameters, self.metadata = load_head(head_path, backbone)
         self.detector = detector or HSVRegions()
         self.tracker = None
@@ -22,23 +22,10 @@ class RIMem:
         self.now = -1
         self.trace = []
 
-    def reset(self, instruction, seed=7):
+    def reset(self, instruction):
         self.close()
         self.reset_index()
-        if self.ablation == "reweight_only":
-            plan = Plan(
-                instruction,
-                {"task": instruction},
-                (Subgoal(instruction, "task", "task completed", frozenset("ISM")),),
-            )
-            self.tracker = QueryTracker(
-                plan, lambda *a: {"complete": False, "confidence": 0}
-            )
-        else:
-            self.tracker = QueryTracker(self.scq.parse(instruction), self.scq.verify)
-        self.random_weights = (
-            np.random.default_rng(seed).uniform(0.1, 2.5, 4).astype(np.float32)
-        )
+        self.tracker = QueryTracker(self.scq.parse(instruction), self.scq.verify)
 
     def observe(self, front):
         self.now += 1
@@ -47,19 +34,10 @@ class RIMem:
         self.latest_image = np.asarray(front)
 
     def read(self, keys):
-        query = (
-            np.ones(6, np.float32)
-            if self.ablation == "reweight_only"
-            else self.tracker.update(self.latest_image)
-        )
+        query = self.tracker.update(self.latest_image)
         subgoal = self.tracker.active
         target = self.tracker.plan.entities[subgoal.target]
         codes = subgoal.evidence
-        if self.ablation == "reweight_only":
-            # Query-free control: all referenced entities and all fact types.
-            target = " ".join(self.tracker.plan.entities.values())
-            codes = frozenset("ISM")
-            query = np.array([1, 1, 1, 1, 1, 1], np.float32)
         feats, sources = key_features(
             self.index, keys, self.current, target, codes, self.now
         )
@@ -67,8 +45,6 @@ class RIMem:
             query,
             feats,
             self.parameters,
-            ablation=self.ablation,
-            random_weights=self.random_weights,
         )
         # Supplement §2.3: inference averages bounded SOURCE priors, not facts.
         for i, per_source in enumerate(sources):
@@ -77,8 +53,6 @@ class RIMem:
                     query,
                     per_source,
                     self.parameters,
-                    ablation=self.ablation,
-                    random_weights=self.random_weights,
                 )
                 bias[i] = bs.mean()
         self.trace.append(

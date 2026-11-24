@@ -6,7 +6,7 @@ import hashlib
 import json
 from pathlib import Path
 import sys
-from .baselines import METHODS, ABLATIONS
+from .baselines import METHODS, PAPER_BASELINES, ADDITIONAL_BASELINES, RIMEM_BACKBONES
 from .protocol import CONDITIONS, TASKS, EpisodeSpec
 
 
@@ -87,7 +87,9 @@ def main():
                 {
                     "conditions": {k: asdict(v) for k, v in CONDITIONS.items()},
                     "methods": {k: asdict(v) for k, v in METHODS.items()},
-                    "ablations": ABLATIONS,
+                    "paper_baselines": PAPER_BASELINES,
+                    "additional_baselines": ADDITIONAL_BASELINES,
+                    "rimem_backbones": RIMEM_BACKBONES,
                 },
                 indent=2,
                 ensure_ascii=False,
