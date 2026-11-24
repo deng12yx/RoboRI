@@ -259,7 +259,8 @@ class HAMLETPolicy:
         return np.concatenate((jp, gp.reshape(len(jp), -1)), axis=-1)
 
     def close(self):
-        pass
+        self.client.socket.close(linger=0)
+        self.client.context.term()
 
 
 class SAMPolicy:
@@ -313,7 +314,8 @@ class SAMPolicy:
                 )
 
     def observe(self, obs):
-        pass
+        """SAM2Act consumes the current RGB-D observation inside act()."""
+        return None
 
     def act(self, obs, info):
         from .sam_observation import from_raw
