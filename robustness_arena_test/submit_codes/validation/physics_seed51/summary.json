@@ -1,0 +1,101 @@
+{
+  "type": "mechanics_test_only",
+  "results": [
+    {
+      "condition": "unrelated_object",
+      "passed": true,
+      "event": {
+        "condition": "unrelated_object",
+        "variant": "remove",
+        "style": "slide",
+        "target": "cream_cheese_1",
+        "start": 40,
+        "end": 160,
+        "first_manipulation": 56,
+        "target_manipulation": null,
+        "valid": true,
+        "invalid_reason": null,
+        "visible_control_steps": 120,
+        "initial_scene_sha256": "a6eb2b4ba16e2e19bb3ccde2003e5dc3ce82ef3f8c2e994439c11709a75145fb",
+        "events": [
+          {
+            "step": 40,
+            "event": "start"
+          },
+          {
+            "step": 60,
+            "stage": "mechanics_test_first_stage"
+          },
+          {
+            "step": 160,
+            "event": "end"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "target_like_object",
+      "passed": true,
+      "event": {
+        "condition": "target_like_object",
+        "variant": "remove",
+        "style": "slide",
+        "target": "cream_cheese_1",
+        "start": 40,
+        "end": 160,
+        "first_manipulation": 56,
+        "target_manipulation": null,
+        "valid": true,
+        "invalid_reason": null,
+        "visible_control_steps": 120,
+        "initial_scene_sha256": "a6eb2b4ba16e2e19bb3ccde2003e5dc3ce82ef3f8c2e994439c11709a75145fb",
+        "events": [
+          {
+            "step": 40,
+            "event": "start"
+          },
+          {
+            "step": 60,
+            "stage": "mechanics_test_first_stage"
+          },
+          {
+            "step": 160,
+            "event": "end"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "light_change",
+      "passed": true,
+      "event": {
+        "condition": "light_change",
+        "variant": "dark",
+        "style": "slide",
+        "target": "cream_cheese_1",
+        "start": 40,
+        "end": 43,
+        "first_manipulation": 56,
+        "target_manipulation": null,
+        "valid": true,
+        "invalid_reason": null,
+        "visible_control_steps": 3,
+        "initial_scene_sha256": "a6eb2b4ba16e2e19bb3ccde2003e5dc3ce82ef3f8c2e994439c11709a75145fb",
+        "events": [
+          {
+            "step": 40,
+            "event": "start"
+          },
+          {
+            "step": 43,
+            "event": "end"
+          },
+          {
+            "step": 60,
+            "stage": "mechanics_test_first_stage"
+          }
+        ]
+      }
+    }
+  ]
+}

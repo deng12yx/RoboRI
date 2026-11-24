@@ -1,0 +1,335 @@
+{
+  "type": "mechanics_test_only",
+  "results": [
+    {
+      "condition": "onset_arrival",
+      "passed": true,
+      "event": {
+        "condition": "onset_arrival",
+        "variant": "default",
+        "style": "handin",
+        "target": "butter_1",
+        "start": 10,
+        "end": 50,
+        "first_manipulation": 56,
+        "target_manipulation": null,
+        "valid": true,
+        "invalid_reason": null,
+        "visible_control_steps": 36,
+        "paper_default_timing_met": true,
+        "initial_scene_sha256": "f1b3d101ab2528ce760dc52dc2aec1939e42a298edd72c772df1247addde93dc",
+        "events": [
+          {
+            "step": 10,
+            "event": "start"
+          },
+          {
+            "step": 50,
+            "event": "end"
+          },
+          {
+            "step": 60,
+            "stage": "mechanics_test_first_stage"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "mid_arrival",
+      "passed": true,
+      "event": {
+        "condition": "mid_arrival",
+        "variant": "default",
+        "style": "handin",
+        "target": "cream_cheese_1",
+        "start": 61,
+        "end": 73,
+        "first_manipulation": 56,
+        "target_manipulation": null,
+        "valid": true,
+        "invalid_reason": null,
+        "visible_control_steps": 6,
+        "paper_default_timing_met": true,
+        "initial_scene_sha256": "f1b3d101ab2528ce760dc52dc2aec1939e42a298edd72c772df1247addde93dc",
+        "events": [
+          {
+            "step": 60,
+            "stage": "mechanics_test_first_stage"
+          },
+          {
+            "step": 61,
+            "event": "start"
+          },
+          {
+            "step": 73,
+            "event": "end"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "mid_shift",
+      "passed": true,
+      "event": {
+        "condition": "mid_shift",
+        "variant": "default",
+        "style": "handin",
+        "target": "cream_cheese_1",
+        "start": 80,
+        "end": 88,
+        "first_manipulation": 56,
+        "target_manipulation": null,
+        "valid": true,
+        "invalid_reason": null,
+        "visible_control_steps": 5,
+        "paper_default_timing_met": true,
+        "initial_scene_sha256": "f1b3d101ab2528ce760dc52dc2aec1939e42a298edd72c772df1247addde93dc",
+        "events": [
+          {
+            "step": 60,
+            "stage": "mechanics_test_first_stage"
+          },
+          {
+            "step": 80,
+            "event": "start"
+          },
+          {
+            "step": 88,
+            "event": "end"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "remove_return",
+      "passed": true,
+      "event": {
+        "condition": "remove_return",
+        "variant": "default",
+        "style": "handin",
+        "target": "cream_cheese_1",
+        "start": 80,
+        "end": 160,
+        "first_manipulation": 56,
+        "target_manipulation": null,
+        "valid": true,
+        "invalid_reason": null,
+        "visible_control_steps": 76,
+        "paper_default_timing_met": true,
+        "initial_scene_sha256": "f1b3d101ab2528ce760dc52dc2aec1939e42a298edd72c772df1247addde93dc",
+        "events": [
+          {
+            "step": 60,
+            "stage": "mechanics_test_first_stage"
+          },
+          {
+            "step": 80,
+            "event": "start"
+          },
+          {
+            "step": 160,
+            "event": "end"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "tv_on",
+      "passed": true,
+      "event": {
+        "condition": "tv_on",
+        "variant": "default",
+        "style": "handin",
+        "target": "cream_cheese_1",
+        "start": 40,
+        "end": 280,
+        "first_manipulation": 56,
+        "target_manipulation": null,
+        "valid": true,
+        "invalid_reason": null,
+        "visible_control_steps": 240,
+        "paper_default_timing_met": true,
+        "initial_scene_sha256": "f1b3d101ab2528ce760dc52dc2aec1939e42a298edd72c772df1247addde93dc",
+        "events": [
+          {
+            "step": 40,
+            "event": "start"
+          },
+          {
+            "step": 60,
+            "stage": "mechanics_test_first_stage"
+          },
+          {
+            "step": 280,
+            "event": "end"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "object_passby",
+      "passed": true,
+      "event": {
+        "condition": "object_passby",
+        "variant": "default",
+        "style": "handin",
+        "target": "cream_cheese_1",
+        "start": 40,
+        "end": 280,
+        "first_manipulation": 56,
+        "target_manipulation": null,
+        "valid": true,
+        "invalid_reason": null,
+        "visible_control_steps": 222,
+        "paper_default_timing_met": true,
+        "initial_scene_sha256": "f1b3d101ab2528ce760dc52dc2aec1939e42a298edd72c772df1247addde93dc",
+        "events": [
+          {
+            "step": 40,
+            "event": "start"
+          },
+          {
+            "step": 60,
+            "stage": "mechanics_test_first_stage"
+          },
+          {
+            "step": 280,
+            "event": "end"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "unrelated_object",
+      "passed": true,
+      "event": {
+        "condition": "unrelated_object",
+        "variant": "insert",
+        "style": "handin",
+        "target": "cream_cheese_1",
+        "start": 40,
+        "end": 280,
+        "first_manipulation": 56,
+        "target_manipulation": null,
+        "valid": true,
+        "invalid_reason": null,
+        "visible_control_steps": 240,
+        "paper_default_timing_met": true,
+        "initial_scene_sha256": "f1b3d101ab2528ce760dc52dc2aec1939e42a298edd72c772df1247addde93dc",
+        "events": [
+          {
+            "step": 40,
+            "event": "start"
+          },
+          {
+            "step": 60,
+            "stage": "mechanics_test_first_stage"
+          },
+          {
+            "step": 280,
+            "event": "end"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "target_like_object",
+      "passed": true,
+      "event": {
+        "condition": "target_like_object",
+        "variant": "insert",
+        "style": "handin",
+        "target": "cream_cheese_1",
+        "start": 40,
+        "end": 280,
+        "first_manipulation": 56,
+        "target_manipulation": null,
+        "valid": true,
+        "invalid_reason": null,
+        "visible_control_steps": 240,
+        "paper_default_timing_met": true,
+        "initial_scene_sha256": "f1b3d101ab2528ce760dc52dc2aec1939e42a298edd72c772df1247addde93dc",
+        "events": [
+          {
+            "step": 40,
+            "event": "start"
+          },
+          {
+            "step": 60,
+            "stage": "mechanics_test_first_stage"
+          },
+          {
+            "step": 280,
+            "event": "end"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "camera_shake",
+      "passed": true,
+      "event": {
+        "condition": "camera_shake",
+        "variant": "default",
+        "style": "handin",
+        "target": "cream_cheese_1",
+        "start": 40,
+        "end": 43,
+        "first_manipulation": 56,
+        "target_manipulation": null,
+        "valid": true,
+        "invalid_reason": null,
+        "visible_control_steps": 3,
+        "paper_default_timing_met": true,
+        "initial_scene_sha256": "f1b3d101ab2528ce760dc52dc2aec1939e42a298edd72c772df1247addde93dc",
+        "events": [
+          {
+            "step": 40,
+            "event": "start"
+          },
+          {
+            "step": 43,
+            "event": "end"
+          },
+          {
+            "step": 60,
+            "stage": "mechanics_test_first_stage"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "light_change",
+      "passed": true,
+      "event": {
+        "condition": "light_change",
+        "variant": "bright",
+        "style": "handin",
+        "target": "cream_cheese_1",
+        "start": 40,
+        "end": 43,
+        "first_manipulation": 56,
+        "target_manipulation": null,
+        "valid": true,
+        "invalid_reason": null,
+        "visible_control_steps": 3,
+        "paper_default_timing_met": true,
+        "initial_scene_sha256": "f1b3d101ab2528ce760dc52dc2aec1939e42a298edd72c772df1247addde93dc",
+        "events": [
+          {
+            "step": 40,
+            "event": "start"
+          },
+          {
+            "step": 43,
+            "event": "end"
+          },
+          {
+            "step": 60,
+            "stage": "mechanics_test_first_stage"
+          }
+        ]
+      }
+    }
+  ]
+}

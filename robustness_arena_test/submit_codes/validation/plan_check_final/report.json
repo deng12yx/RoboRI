@@ -1,0 +1,1517 @@
+{
+  "success_rates": [
+    {
+      "method": "fs_mod",
+      "condition": "camera_shake",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod",
+      "condition": "clean",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod",
+      "condition": "light_change",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "bright": null,
+        "dark": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod",
+      "condition": "mid_arrival",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod",
+      "condition": "mid_shift",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod",
+      "condition": "object_passby",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod",
+      "condition": "onset_arrival",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod",
+      "condition": "remove_return",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod",
+      "condition": "target_like_object",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "insert": null,
+        "remove": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod",
+      "condition": "tv_on",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod",
+      "condition": "unrelated_object",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "insert": null,
+        "remove": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod_ri",
+      "condition": "camera_shake",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod_ri",
+      "condition": "clean",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod_ri",
+      "condition": "light_change",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "bright": null,
+        "dark": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod_ri",
+      "condition": "mid_arrival",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod_ri",
+      "condition": "mid_shift",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod_ri",
+      "condition": "object_passby",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod_ri",
+      "condition": "onset_arrival",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod_ri",
+      "condition": "remove_return",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod_ri",
+      "condition": "target_like_object",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "insert": null,
+        "remove": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod_ri",
+      "condition": "tv_on",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "fs_mod_ri",
+      "condition": "unrelated_object",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "insert": null,
+        "remove": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla",
+      "condition": "camera_shake",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla",
+      "condition": "clean",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla",
+      "condition": "light_change",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "bright": null,
+        "dark": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla",
+      "condition": "mid_arrival",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla",
+      "condition": "mid_shift",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla",
+      "condition": "object_passby",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla",
+      "condition": "onset_arrival",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla",
+      "condition": "remove_return",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla",
+      "condition": "target_like_object",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "insert": null,
+        "remove": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla",
+      "condition": "tv_on",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla",
+      "condition": "unrelated_object",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "insert": null,
+        "remove": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla_ri",
+      "condition": "camera_shake",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla_ri",
+      "condition": "clean",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla_ri",
+      "condition": "light_change",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "bright": null,
+        "dark": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla_ri",
+      "condition": "mid_arrival",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla_ri",
+      "condition": "mid_shift",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla_ri",
+      "condition": "object_passby",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla_ri",
+      "condition": "onset_arrival",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla_ri",
+      "condition": "remove_return",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": null
+      },
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla_ri",
+      "condition": "target_like_object",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "insert": null,
+        "remove": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla_ri",
+      "condition": "tv_on",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "default": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    },
+    {
+      "method": "simplememvla_ri",
+      "condition": "unrelated_object",
+      "planned": 4,
+      "completed": 0,
+      "valid_events": 0,
+      "paper_default_events": 0,
+      "technical_errors": 0,
+      "missing": 4,
+      "tsr_scheduled_available": null,
+      "tsr_valid_available": null,
+      "tsr_full": null,
+      "variant_tsr": {
+        "insert": null,
+        "remove": null
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 21,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        },
+        {
+          "task": 25,
+          "planned": 2,
+          "completed": 0,
+          "valid": 0,
+          "tsr_valid_available": null
+        }
+      ]
+    }
+  ],
+  "paired_success_times": []
+}

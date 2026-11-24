@@ -1,0 +1,75 @@
+{
+  "id": "fs_mod__t25_s51__mid_shift",
+  "method": "fs_mod",
+  "task": 25,
+  "seed": 51,
+  "condition": "mid_shift",
+  "variant": "default",
+  "protocol_hash": "e9407f4dd394966706ce61996c4d11340164ccda4f3318ef772698984a062fd9",
+  "schema": 1,
+  "prompt": "Pick and place butter and cream from plate1 to plate2, respectively.",
+  "status": "completed",
+  "success": true,
+  "provenance": {},
+  "max_steps": 2500,
+  "csr": 100.0,
+  "diagnostics": {
+    "stage_success": true,
+    "extra_pour_detected": false,
+    "pour_1_step": null,
+    "pour_2_step": null,
+    "extra_monitor_end_step": null,
+    "failure_reason": null
+  },
+  "stage_done": {
+    "01_Place_Butter_Plate2": true,
+    "02_Place_Cream_Cheese_Plate2": true
+  },
+  "stage_events": [
+    {
+      "recorded_step": 342,
+      "stage": "01_Place_Butter_Plate2"
+    },
+    {
+      "recorded_step": 733,
+      "stage": "02_Place_Cream_Cheese_Plate2"
+    }
+  ],
+  "online_steps": 923,
+  "completion_recorded_step": 733,
+  "completion_seconds": 36.15,
+  "wall_seconds": 52.46652616583742,
+  "event": {
+    "condition": "mid_shift",
+    "variant": "default",
+    "style": "slide",
+    "target": "cream_cheese_1",
+    "start": 204,
+    "end": 212,
+    "first_manipulation": 94,
+    "target_manipulation": 478,
+    "valid": true,
+    "invalid_reason": null,
+    "visible_control_steps": 13,
+    "paper_default_timing_met": true,
+    "initial_scene_sha256": "a6eb2b4ba16e2e19bb3ccde2003e5dc3ce82ef3f8c2e994439c11709a75145fb",
+    "events": [
+      {
+        "step": 204,
+        "event": "start"
+      },
+      {
+        "step": 212,
+        "event": "end"
+      },
+      {
+        "step": 342,
+        "stage": "01_Place_Butter_Plate2"
+      },
+      {
+        "step": 733,
+        "stage": "02_Place_Cream_Cheese_Plate2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+ "id": "t09_s52_mme_vla_clean",
+ "task": 9,
+ "seed": 52,
+ "mode": "mme_vla",
+ "method": "mme_vla",
+ "suite_category": "Counting",
+ "tier": null,
+ "status": "completed",
+ "error": null,
+ "worker": "1",
+ "vla_gpu": "3",
+ "vlm_gpu": "3",
+ "started_utc": "2026-10-27T06:32:39+00:00",
+ "finished_utc": "2026-10-27T06:33:36+00:00",
+ "prompt": "Put butter into the frypan, pour tomato sauce over it twice, then place the sauce bottle into the bowl drainer.",
+ "csr": 1.0,
+ "tsr": 1,
+ "stage_score_pct": 100.0,
+ "stage_done": {
+  "01_Lift_Tomato_Sauce": true,
+  "02_Pour_One": true,
+  "03_Pour_Two": true
+ },
+ "diagnostics": {
+  "stage_success": true,
+  "extra_pour_detected": false,
+  "pour_1_step": 719,
+  "pour_2_step": 821,
+  "extra_monitor_end_step": 851,
+  "failure_reason": null
+ },
+ "policy_steps": 842,
+ "env_steps": 852,
+ "wall_sec": 55.4758,
+ "init_state_sha1": "8b9ff6959a355e4d7edf0eebfda86c6aeee47d69",
+ "reset_retries": 0,
+ "s1": {
+  "calls": 43,
+  "latency": {
+   "n": 43,
+   "median": 0.2005,
+   "p90": 0.2629,
+   "mean": 0.6437
+  },
+  "chunk_period": {
+   "n": 0
+  }
+ },
+ "s2": {
+  "calls": 0,
+  "errors": 0,
+  "latency": {
+   "n": 0
+  },
+  "update_period": {
+   "n": 0
+  },
+  "steps_between_updates": {
+   "n": 0
+  },
+  "staleness_steps": {
+   "n": 0
+  },
+  "s1_chunks_per_update": null
+ },
+ "memory": {
+  "max_K": 32,
+  "final_K": 0,
+  "calls_with_history": 42,
+  "candidate_frames": 0,
+  "final_keyframes": [],
+  "memory_frames_used_max": 32,
+  "memory_frames_stored_max": 841,
+  "memory_span_steps_max": 840
+ },
+ "primitives": [],
+ "prompt_switches": 0,
+ "stage_events": [
+  {
+   "t": 557,
+   "stage": "01_Lift_Tomato_Sauce",
+   "wall": 23.4439
+  },
+  {
+   "t": 719,
+   "stage": "02_Pour_One",
+   "wall": 31.8797
+  },
+  {
+   "t": 821,
+   "stage": "03_Pour_Two",
+   "wall": 54.3192
+  }
+ ]
+}

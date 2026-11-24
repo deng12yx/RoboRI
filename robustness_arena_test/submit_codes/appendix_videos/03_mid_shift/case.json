@@ -1,0 +1,83 @@
+{
+  "number": 3,
+  "condition": "mid_shift",
+  "method": "FS+Mod (MME-VLA)",
+  "task": 21,
+  "seed": 51,
+  "clean_success": true,
+  "perturbed_success": false,
+  "initial_state_sha1": "f1a38148f98f7b00de1bbd77f1e86e12e169ac67",
+  "original_condition": "displace",
+  "source_episode": "results/task_relevant/suites/mme_vla/episodes/t21_s51_mme_vla_displace",
+  "source_clean": "results/task_relevant/suites/mme_vla/episodes/t21_s51_mme_vla_clean",
+  "source_protocol": "v4.1+tr-v1",
+  "paper_parameter_match": false,
+  "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+  "prompt": "Put butter into the microwave and then put chocolate into the location where the butter was placed.",
+  "incomplete_stages": [
+    "03_Place_Chocolate_Microwave"
+  ],
+  "event_steps_in_source_clock": [
+    122,
+    185
+  ],
+  "event_parameters": {
+    "family": "displace",
+    "timing": null,
+    "style": "hand",
+    "dirs": [
+      "front_left",
+      "right",
+      "back_left",
+      "left",
+      "back_right",
+      "front_right"
+    ],
+    "object": "chocolate_pudding_1",
+    "boundary": "02_Place_Butter_Microwave",
+    "instruction_step": 0,
+    "skipped": null,
+    "geo": {
+      "geo:prev_lift": 235,
+      "geo:prev_near": 358
+    },
+    "status": "done",
+    "start": 122,
+    "end": 185,
+    "released": null,
+    "boundary_step": 362,
+    "trigger": null,
+    "dir": "front_left",
+    "wait_steps": 0,
+    "style_fallback": null,
+    "relocated": false,
+    "offset_to_boundary": -240,
+    "release_after_instruction": null,
+    "displaced_mm": 55.0,
+    "planned_mm": 55.0,
+    "notes": [
+      {
+        "others_drift_without_it": 0.0,
+        "drift_with_it": 0.0
+      },
+      {
+        "displaced_mm": 55.0,
+        "planned_mm": 55.0,
+        "tried": 1
+      }
+    ]
+  },
+  "video_event_frame_range": [
+    112,
+    175
+  ],
+  "failure_video": "03_mid_shift/failure.mp4",
+  "clean_video": "03_mid_shift/clean.mp4",
+  "comparison": "03_mid_shift/comparison.jpg",
+  "failure_sha256": "4689cd8fba4bb40edebca6a6ab37b8c09580ffd81ae1c0292eb06b86a7e74e61",
+  "clean_sha256": "cc689ed8d088b8726ffccacc682ad55eb0ddbd1b0b18bed841ee4467e17a675f",
+  "video_frames": {
+    "failure": 2500,
+    "clean": 952
+  }
+}

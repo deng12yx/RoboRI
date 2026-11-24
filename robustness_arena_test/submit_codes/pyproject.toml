@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robomemarena-ri"
+version = "0.1.0"
+description = "RoboMemArena perturbations and RI-Mem memory readout"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "Pillow>=9"]
+
+[project.optional-dependencies]
+torch = ["torch>=2.4", "transformers>=4.57"]
+simplemem = ["torch==2.4.1", "transformers==5.13.1"]
+jax = ["jax>=0.4.35", "optax>=0.2"]
+data = ["h5py>=3.10", "opencv-python-headless>=4.8"]
+test = ["pytest>=8", "nbformat>=5", "nbclient>=0.10", "ipykernel>=6"]
+
+[project.scripts]
+robo-ri = "robo_ri.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["robo_ri*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

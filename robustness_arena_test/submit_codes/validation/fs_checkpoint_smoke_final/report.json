@@ -1,0 +1,101 @@
+{
+  "success_rates": [
+    {
+      "method": "fs_mod",
+      "condition": "clean",
+      "planned": 1,
+      "completed": 1,
+      "valid_events": 1,
+      "paper_default_events": 1,
+      "technical_errors": 0,
+      "missing": 0,
+      "tsr_scheduled_available": 100.0,
+      "tsr_valid_available": 100.0,
+      "tsr_full": 100.0,
+      "variant_tsr": {
+        "default": 100.0
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 25,
+          "planned": 1,
+          "completed": 1,
+          "valid": 1,
+          "tsr_valid_available": 100.0
+        }
+      ]
+    },
+    {
+      "method": "fs_mod",
+      "condition": "light_change",
+      "planned": 1,
+      "completed": 1,
+      "valid_events": 1,
+      "paper_default_events": 1,
+      "technical_errors": 0,
+      "missing": 0,
+      "tsr_scheduled_available": 100.0,
+      "tsr_valid_available": 100.0,
+      "tsr_full": 100.0,
+      "variant_tsr": {
+        "dark": 100.0
+      },
+      "style_tsr": {},
+      "per_task": [
+        {
+          "task": 25,
+          "planned": 1,
+          "completed": 1,
+          "valid": 1,
+          "tsr_valid_available": 100.0
+        }
+      ]
+    },
+    {
+      "method": "fs_mod",
+      "condition": "mid_shift",
+      "planned": 1,
+      "completed": 1,
+      "valid_events": 1,
+      "paper_default_events": 1,
+      "technical_errors": 0,
+      "missing": 0,
+      "tsr_scheduled_available": 100.0,
+      "tsr_valid_available": 100.0,
+      "tsr_full": 100.0,
+      "variant_tsr": {
+        "default": 100.0
+      },
+      "style_tsr": {
+        "handin": null,
+        "slide": 100.0
+      },
+      "per_task": [
+        {
+          "task": 25,
+          "planned": 1,
+          "completed": 1,
+          "valid": 1,
+          "tsr_valid_available": 100.0
+        }
+      ]
+    }
+  ],
+  "paired_success_times": [
+    {
+      "method": "fs_mod",
+      "condition": "light_change",
+      "paired_successes": 1,
+      "mean_added_seconds": 0.20000000000000284,
+      "task_macro_added_seconds": 0.20000000000000284
+    },
+    {
+      "method": "fs_mod",
+      "condition": "mid_shift",
+      "paired_successes": 1,
+      "mean_added_seconds": 0.5,
+      "task_macro_added_seconds": 0.5
+    }
+  ]
+}

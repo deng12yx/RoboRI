@@ -1,0 +1,8 @@
+{
+  "unittest": "13 passed; numerical/evidence/coverage/pairing/calibration validation",
+  "fs_native": "Native JAX MemoryAttention: zero-bias identity, nonzero bias gradient; scanned Gemma BF16 readout arguments/output verified",
+  "simplemem_native": "Native Qwen3.5 full-attention layers 27/31: zero-bias identity; 35 head parameters update with frozen mock action policy; pretrained VLA weights not used in this unit check",
+  "catalog": "26 task profiles match BDDL objects and native scorer",
+  "notebook": "17 cells executed; 13 code cells; 10 embedded comparison images",
+  "note": "These checks are not task success measurements"
+}

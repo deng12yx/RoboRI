@@ -1,0 +1,59 @@
+{
+  "tasks": [
+    25,
+    21
+  ],
+  "seeds": [
+    50,
+    51
+  ],
+  "conditions": [
+    "clean",
+    "onset_arrival",
+    "mid_arrival",
+    "mid_shift",
+    "remove_return",
+    "tv_on",
+    "object_passby",
+    "unrelated_object",
+    "target_like_object",
+    "camera_shake",
+    "light_change"
+  ],
+  "methods": [
+    "fs_mod",
+    "simplememvla",
+    "fs_mod_ri",
+    "simplememvla_ri"
+  ],
+  "runtime": {
+    "max_steps": 2500,
+    "post_goal_steps": 200
+  },
+  "video": true,
+  "backends": {
+    "fs_mod": {
+      "port": 8801
+    },
+    "fs_mod_retrieval": {
+      "port": 8802
+    },
+    "fs_mod_ri": {
+      "port": 8803
+    },
+    "pi05": {
+      "port": 8800
+    },
+    "memer": {
+      "port": 8800
+    },
+    "predimem": {
+      "port": 8800,
+      "planner_device": "cuda:0"
+    },
+    "traceflow": {
+      "upper_port": 8830,
+      "lower_port": 8831
+    }
+  }
+}

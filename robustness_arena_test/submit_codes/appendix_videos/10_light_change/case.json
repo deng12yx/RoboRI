@@ -1,0 +1,59 @@
+{
+  "number": 10,
+  "condition": "light_change",
+  "method": "FS+Mod (MME-VLA)",
+  "task": 9,
+  "seed": 52,
+  "clean_success": true,
+  "perturbed_success": false,
+  "initial_state_sha1": "8b9ff6959a355e4d7edf0eebfda86c6aeee47d69",
+  "original_condition": "inc_light",
+  "source_episode": "results/incidental/suites/mme_vla/episodes/t09_s52_mme_vla_inc_light",
+  "source_clean": "results/task_relevant/suites_seqcount/mme_vla/episodes/t09_s52_mme_vla_clean",
+  "source_protocol": "v4.1",
+  "paper_parameter_match": false,
+  "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+  "prompt": "Put butter into the frypan, pour tomato sauce over it twice, then place the sauce bottle into the bowl drainer.",
+  "incomplete_stages": [
+    "03_Pour_Two"
+  ],
+  "event_steps_in_source_clock": [
+    250,
+    290
+  ],
+  "event_parameters": {
+    "plan_events": [
+      {
+        "kind": "lamp",
+        "at": "instruction+250",
+        "on_steps": 315,
+        "role": "ambient_inc"
+      }
+    ],
+    "finished_events": [
+      {
+        "kind": "lamp",
+        "at": "instruction+250",
+        "on_steps": 315,
+        "role": "ambient_inc",
+        "start": 250,
+        "end": 564,
+        "wait_steps": 0,
+        "notes": []
+      }
+    ]
+  },
+  "video_event_frame_range": [
+    240,
+    280
+  ],
+  "failure_video": "10_light_change/failure.mp4",
+  "clean_video": "10_light_change/clean.mp4",
+  "comparison": "10_light_change/comparison.jpg",
+  "failure_sha256": "db6ed8bbd60cf5169c130877f77d970ef85ea5e46b8baa5110c96253402ed4b2",
+  "clean_sha256": "56938ef03f5bb68b1771ef8e9a7ae8d41933d03cc7be9efedab667dd76f9636d",
+  "video_frames": {
+    "failure": 2500,
+    "clean": 842
+  }
+}

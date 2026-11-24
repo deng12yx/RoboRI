@@ -1,0 +1,16 @@
+{
+  "python": "3.11.17",
+  "interpreter": "/home/yangxiang/Projects/LAPSE/robustness_arena_test/.venv-simplemem/bin/python",
+  "packages": {
+    "numpy": "1.26.4",
+    "Pillow": "12.3.0",
+    "torch": "2.4.1",
+    "transformers": "5.13.1",
+    "mujoco": "2.3.7",
+    "robosuite": "1.4.1",
+    "imageio": "2.38.0",
+    "nbformat": "5.11.1",
+    "opencv-python": "4.11.0.86",
+    "websockets": "15.0.1"
+  }
+}

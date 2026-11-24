@@ -1,0 +1,355 @@
+[
+  {
+    "task": 1,
+    "targets": [
+      "cookies_1",
+      "tomato_sauce_1"
+    ],
+    "stages": [
+      "01_Place_Cookies_Basket",
+      "02_Place_Tomato_Basket"
+    ],
+    "bddl": "1_cookies_tomato_basket.bddl"
+  },
+  {
+    "task": 2,
+    "targets": [
+      "butter_1",
+      "popcorn_1"
+    ],
+    "stages": [
+      "01_Place_Butter_Basket",
+      "02_Place_Popcorn_Basket"
+    ],
+    "bddl": "2_butter_popcorn_basket.bddl"
+  },
+  {
+    "task": 3,
+    "targets": [
+      "cream_cheese_1",
+      "chocolate_pudding_1"
+    ],
+    "stages": [
+      "01_Place_Cream_Basket",
+      "02_Place_Pudding_Basket"
+    ],
+    "bddl": "3_cream_pudding_basket.bddl"
+  },
+  {
+    "task": 4,
+    "targets": [
+      "butter_1",
+      "butter_1"
+    ],
+    "stages": [
+      "01_Open_Top_Drawer",
+      "02_Close_Top_Drawer",
+      "03_Open_Middle_Drawer",
+      "04_Close_Middle_Drawer",
+      "05_Open_Bottom_Drawer",
+      "06_Close_Bottom_Drawer",
+      "07_Open_Top_Drawer_Again",
+      "08_Put_Butter_Top_Drawer",
+      "09_Close_Top_Drawer_Final"
+    ],
+    "bddl": "4_drawer_butter.bddl"
+  },
+  {
+    "task": 5,
+    "targets": [
+      "butter_1",
+      "butter_1"
+    ],
+    "stages": [
+      "01_Open_Top_Drawer",
+      "02_Close_Top_Drawer",
+      "03_Open_Middle_Drawer",
+      "04_Close_Middle_Drawer",
+      "05_Open_Bottom_Drawer",
+      "06_Close_Bottom_Drawer",
+      "07_Open_Middle_Drawer_Again",
+      "08_Put_Butter_Middle_Drawer",
+      "09_Close_Middle_Drawer_Final"
+    ],
+    "bddl": "5_butter_middle_drawer.bddl"
+  },
+  {
+    "task": 6,
+    "targets": [
+      "tomato_sauce_1",
+      "cookies_1"
+    ],
+    "stages": [
+      "01_Lift_Tomato_Sauce",
+      "02_Pour_One",
+      "03_Pour_Two"
+    ],
+    "bddl": "6_pour_tomato_sauce_into_bowl_drainer.bddl"
+  },
+  {
+    "task": 7,
+    "targets": [
+      "tomato_sauce_1",
+      "frypan_1"
+    ],
+    "stages": [
+      "01_Lift_Tomato_Sauce",
+      "02_Pour_One",
+      "03_Pour_Two"
+    ],
+    "bddl": "7_pour_tomato_sauce_into_frypan.bddl"
+  },
+  {
+    "task": 8,
+    "targets": [
+      "chocolate_pudding_1",
+      "tomato_sauce_1"
+    ],
+    "stages": [
+      "01_Lift_Tomato_Sauce",
+      "02_Pour_One",
+      "03_Pour_Two"
+    ],
+    "bddl": "8_pick_chocolate_in_frypan_pour_tomato_sauce_twice.bddl"
+  },
+  {
+    "task": 9,
+    "targets": [
+      "butter_1",
+      "tomato_sauce_1"
+    ],
+    "stages": [
+      "01_Lift_Tomato_Sauce",
+      "02_Pour_One",
+      "03_Pour_Two"
+    ],
+    "bddl": "9_pick_butter_in_frypan_pour_tomato_sauce_twice_and_place_tomato_sauce_in_bowl_drainer.bddl"
+  },
+  {
+    "task": 10,
+    "targets": [
+      "wine_bottle_1",
+      "white_yellow_mug_1"
+    ],
+    "stages": [
+      "01_Lift_Wine_Bottle",
+      "02_Pour_One",
+      "03_Pour_Two"
+    ],
+    "bddl": "10_pour_wine_bottle_into_mug.bddl"
+  },
+  {
+    "task": 11,
+    "targets": [
+      "cookies_1",
+      "butter_1"
+    ],
+    "stages": [
+      "01_Open_Top_Drawer",
+      "02_Place_Cookies_Top_Drawer",
+      "03_Close_Top_Drawer",
+      "04_Open_Middle_Drawer",
+      "05_Place_Butter_Middle_Drawer",
+      "06_Close_Middle_Drawer"
+    ],
+    "bddl": "11_cookies_top_butter_middle.bddl"
+  },
+  {
+    "task": 12,
+    "targets": [
+      "cookies_1",
+      "chocolate_pudding_1"
+    ],
+    "stages": [
+      "01_Open_Middle_Drawer",
+      "02_Place_Cookies_Middle_Drawer",
+      "03_Place_Chocolate_Middle_Drawer",
+      "04_Close_Middle_Drawer"
+    ],
+    "bddl": "12_cookies_chocolate_middle_drawer.bddl"
+  },
+  {
+    "task": 13,
+    "targets": [
+      "cookies_1",
+      "butter_1"
+    ],
+    "stages": [
+      "01_Open_Middle_Drawer",
+      "02_Place_Cookies_Middle_Drawer",
+      "03_Place_Butter_Middle_Drawer",
+      "04_Close_Middle_Drawer"
+    ],
+    "bddl": "13_butter_cookies_middle_drawer.bddl"
+  },
+  {
+    "task": 14,
+    "targets": [
+      "cookies_1",
+      "chocolate_pudding_1"
+    ],
+    "stages": [
+      "01_Open_Top_Drawer",
+      "02_Place_Cookies_Top_Drawer",
+      "03_Close_Top_Drawer",
+      "04_Open_Middle_Drawer",
+      "05_Place_Chocolate_Middle_Drawer",
+      "06_Close_Middle_Drawer"
+    ],
+    "bddl": "14_cookies_chocolate_drawers.bddl"
+  },
+  {
+    "task": 15,
+    "targets": [
+      "butter_1",
+      "milk_1"
+    ],
+    "stages": [
+      "01_Lift_Milk",
+      "02_Pour_One",
+      "03_Pour_Two"
+    ],
+    "bddl": "15_butter_milk_frypan.bddl"
+  },
+  {
+    "task": 16,
+    "targets": [
+      "milk_1",
+      "red_coffee_mug_1"
+    ],
+    "stages": [
+      "01_Lift_Milk",
+      "02_Pour_One",
+      "03_Pour_Two"
+    ],
+    "bddl": "16_pour_milk_in_red_coffee_mug_twice_and_place_milk_in_bowl_drainer.bddl"
+  },
+  {
+    "task": 17,
+    "targets": [
+      "butter_1",
+      "chocolate_pudding_1"
+    ],
+    "stages": [
+      "01_Open_Middle_Drawer",
+      "02_Place_Butter_Middle_Drawer",
+      "03_Place_Chocolate_Middle_Drawer",
+      "04_Close_Middle_Drawer"
+    ],
+    "bddl": "17_butter_chocolate_middle_drawer.bddl"
+  },
+  {
+    "task": 18,
+    "targets": [
+      "chocolate_pudding_1",
+      "butter_1"
+    ],
+    "stages": [
+      "01_Place_Chocolate_Cabinet2",
+      "02_Place_Butter_Cabinet2"
+    ],
+    "bddl": "18_chocolate_butter_cabinet.bddl"
+  },
+  {
+    "task": 19,
+    "targets": [
+      "tomato_sauce_1",
+      "milk_1"
+    ],
+    "stages": [
+      "01_Place_Tomato_Sauce_Cabinet2",
+      "02_Place_Milk_Cabinet2",
+      "03_Place_Orange_Juice_Cabinet2"
+    ],
+    "bddl": "19_tomato_milk_orange_cabinet.bddl"
+  },
+  {
+    "task": 20,
+    "targets": [
+      "cookies_1",
+      "chocolate_pudding_1"
+    ],
+    "stages": [
+      "01_Open_Microwave",
+      "02_Place_Cookies_Microwave",
+      "03_Place_Chocolate_Microwave"
+    ],
+    "bddl": "20_cookies_chocolate_microwave.bddl"
+  },
+  {
+    "task": 21,
+    "targets": [
+      "butter_1",
+      "chocolate_pudding_1"
+    ],
+    "stages": [
+      "01_Open_Microwave",
+      "02_Place_Butter_Microwave",
+      "03_Place_Chocolate_Microwave"
+    ],
+    "bddl": "21_butter_chocolate_microwave.bddl"
+  },
+  {
+    "task": 22,
+    "targets": [
+      "tomato_sauce_1",
+      "cookies_1"
+    ],
+    "stages": [
+      "01_Lift_Tomato_Sauce",
+      "02_Pour_One",
+      "03_Pour_Two"
+    ],
+    "bddl": "22_pour_tomato_cookies_microwave.bddl"
+  },
+  {
+    "task": 23,
+    "targets": [
+      "cream_cheese_1",
+      "popcorn_1"
+    ],
+    "stages": [
+      "01_Open_Microwave",
+      "02_Place_Cream_Microwave",
+      "03_Place_Popcorn_Microwave"
+    ],
+    "bddl": "23_cream_popcorn_microwave.bddl"
+  },
+  {
+    "task": 24,
+    "targets": [
+      "cookies_1",
+      "popcorn_1"
+    ],
+    "stages": [
+      "01_Open_Microwave",
+      "02_Place_Cookies_Microwave",
+      "03_Place_Popcorn_Microwave"
+    ],
+    "bddl": "24_cookies_popcorn_microwave.bddl"
+  },
+  {
+    "task": 25,
+    "targets": [
+      "butter_1",
+      "cream_cheese_1"
+    ],
+    "stages": [
+      "01_Place_Butter_Plate2",
+      "02_Place_Cream_Cheese_Plate2"
+    ],
+    "bddl": "25_butter_cream.bddl"
+  },
+  {
+    "task": 26,
+    "targets": [
+      "chocolate_pudding_1",
+      "cream_cheese_1"
+    ],
+    "stages": [
+      "01_Place_Chocolate_Pudding_Plate2",
+      "02_Place_Cream_Cheese_Plate2"
+    ],
+    "bddl": "26_chocolate_pudding_cream.bddl"
+  }
+]

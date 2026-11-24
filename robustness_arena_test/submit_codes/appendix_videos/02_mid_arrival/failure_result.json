@@ -1,0 +1,135 @@
+{
+ "id": "t21_s51_mme_vla_arrive_early",
+ "task": 21,
+ "seed": 51,
+ "mode": "mme_vla",
+ "method": "mme_vla",
+ "suite_category": "Occlusion",
+ "tier": "easy",
+ "status": "completed",
+ "error": null,
+ "worker": "0",
+ "vla_gpu": "4",
+ "vlm_gpu": "4",
+ "started_utc": "2026-10-22T11:51:18+00:00",
+ "finished_utc": "2026-10-22T11:53:28+00:00",
+ "prompt": "Put butter into the microwave and then put chocolate into the location where the butter was placed.",
+ "csr": 0.666667,
+ "tsr": 0,
+ "stage_score_pct": 66.66666666666667,
+ "stage_done": {
+  "01_Open_Microwave": true,
+  "02_Place_Butter_Microwave": true,
+  "03_Place_Chocolate_Microwave": false
+ },
+ "diagnostics": {
+  "stage_success": false,
+  "extra_pour_detected": false,
+  "pour_1_step": null,
+  "pour_2_step": null,
+  "extra_monitor_end_step": null,
+  "failure_reason": "incomplete_stage"
+ },
+ "policy_steps": 2500,
+ "env_steps": 2510,
+ "wall_sec": 125.5667,
+ "init_state_sha1": "f1a38148f98f7b00de1bbd77f1e86e12e169ac67",
+ "reset_retries": 0,
+ "s1": {
+  "calls": 125,
+  "latency": {
+   "n": 125,
+   "median": 0.2211,
+   "p90": 0.3341,
+   "mean": 0.2626
+  },
+  "chunk_period": {
+   "n": 0
+  }
+ },
+ "s2": {
+  "calls": 0,
+  "errors": 0,
+  "latency": {
+   "n": 0
+  },
+  "update_period": {
+   "n": 0
+  },
+  "steps_between_updates": {
+   "n": 0
+  },
+  "staleness_steps": {
+   "n": 0
+  },
+  "s1_chunks_per_update": null
+ },
+ "memory": {
+  "max_K": 32,
+  "final_K": 0,
+  "calls_with_history": 124,
+  "candidate_frames": 0,
+  "final_keyframes": [],
+  "memory_frames_used_max": 32,
+  "memory_frames_stored_max": 2481,
+  "memory_span_steps_max": 2480
+ },
+ "primitives": [],
+ "prompt_switches": 0,
+ "stage_events": [
+  {
+   "t": 99,
+   "stage": "01_Open_Microwave",
+   "wall": 11.1007
+  },
+  {
+   "t": 361,
+   "stage": "02_Place_Butter_Microwave",
+   "wall": 25.1975
+  }
+ ],
+ "realism": {
+  "condition": "arrive_early",
+  "version": "v4.1+tr-v1",
+  "instruction_step": 0,
+  "scene_complete_step": null,
+  "hold": null,
+  "hold_change": null,
+  "prephase_frames": 0,
+  "prephase_frames_to_memory": 0,
+  "events_done": {
+   "carry_in": 1
+  },
+  "events_not_finished": [],
+  "contacts": 0,
+  "boot_contacts": 0,
+  "robot_wait_steps": 8,
+  "relocations": [],
+  "official_qpos_sha1": "f1a38148f98f7b00de1bbd77f1e86e12e169ac67",
+  "tr": {
+   "family": "arrive",
+   "timing": "early",
+   "style": "hand",
+   "object": "chocolate_pudding_1",
+   "boundary": "02_Place_Butter_Microwave",
+   "instruction_step": 0,
+   "skipped": null,
+   "geo": {
+    "geo:prev_lift": 235,
+    "geo:prev_near": 358
+   },
+   "status": "done",
+   "start": 235,
+   "end": 308,
+   "released": 277,
+   "boundary_step": 362,
+   "trigger": "geo:prev_lift",
+   "dir": "right",
+   "wait_steps": 8,
+   "relocated": false,
+   "offset_to_boundary": -85,
+   "release_after_instruction": 277,
+   "settled_offset_mm": 0.0
+  }
+ }
+}

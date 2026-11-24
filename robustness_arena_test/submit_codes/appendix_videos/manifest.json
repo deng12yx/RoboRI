@@ -1,0 +1,864 @@
+{
+  "schema": 1,
+  "selection": "qualitative clean-success to failure pairs; not an unbiased TSR sample",
+  "cases": [
+    {
+      "number": 1,
+      "condition": "onset_arrival",
+      "method": "FS+Mod (MME-VLA)",
+      "task": 9,
+      "seed": 52,
+      "clean_success": true,
+      "perturbed_success": false,
+      "initial_state_sha1": "8b9ff6959a355e4d7edf0eebfda86c6aeee47d69",
+      "original_condition": "onset_sync",
+      "source_episode": "results/task_relevant/suites_seqcount/mme_vla/episodes/t09_s52_mme_vla_onset_sync",
+      "source_clean": "results/task_relevant/suites_seqcount/mme_vla/episodes/t09_s52_mme_vla_clean",
+      "source_protocol": "v4.1+tr-v1",
+      "paper_parameter_match": false,
+      "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+      "prompt": "Put butter into the frypan, pour tomato sauce over it twice, then place the sauce bottle into the bowl drainer.",
+      "incomplete_stages": [
+        "03_Pour_Two"
+      ],
+      "event_steps_in_source_clock": [
+        88,
+        154
+      ],
+      "event_parameters": {
+        "family": "onset",
+        "timing": "sync",
+        "style": "hand",
+        "dirs": [
+          "right",
+          "back_left",
+          "left",
+          "front_left",
+          "back_right",
+          "front_right"
+        ],
+        "object": "butter_1",
+        "boundary": "geo:prev_placed",
+        "release_offset_planned": 3,
+        "instruction_step": 120,
+        "skipped": null,
+        "geo": {
+          "geo:prev_lift": 295,
+          "geo:prev_near": 365,
+          "geo:prev_placed": 446
+        },
+        "status": "done",
+        "start": 88,
+        "end": 154,
+        "released": 123,
+        "boundary_step": 446,
+        "trigger": "release_at",
+        "dir": "right",
+        "wait_steps": 0,
+        "style_fallback": null,
+        "relocated": false,
+        "offset_to_boundary": -323,
+        "release_after_instruction": 3,
+        "settled_offset_mm": 0.0,
+        "notes": [
+          {
+            "others_drift_without_it": 0.0,
+            "drift_with_it": 0.0
+          },
+          {
+            "released_at": 123
+          },
+          {
+            "settled_offset_mm": 0.0
+          }
+        ]
+      },
+      "video_event_frame_range": [
+        87,
+        144
+      ],
+      "failure_video": "01_onset_arrival/failure.mp4",
+      "clean_video": "01_onset_arrival/clean.mp4",
+      "comparison": "01_onset_arrival/comparison.jpg",
+      "failure_sha256": "be58135debffb18963002a52048312d3194c32712248c4b7f7699782137d764c",
+      "clean_sha256": "56938ef03f5bb68b1771ef8e9a7ae8d41933d03cc7be9efedab667dd76f9636d",
+      "video_frames": {
+        "failure": 2620,
+        "clean": 842
+      }
+    },
+    {
+      "number": 2,
+      "condition": "mid_arrival",
+      "method": "FS+Mod (MME-VLA)",
+      "task": 21,
+      "seed": 51,
+      "clean_success": true,
+      "perturbed_success": false,
+      "initial_state_sha1": "f1a38148f98f7b00de1bbd77f1e86e12e169ac67",
+      "original_condition": "arrive_early",
+      "source_episode": "results/task_relevant/suites/mme_vla/episodes/t21_s51_mme_vla_arrive_early",
+      "source_clean": "results/task_relevant/suites/mme_vla/episodes/t21_s51_mme_vla_clean",
+      "source_protocol": "v4.1+tr-v1",
+      "paper_parameter_match": false,
+      "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+      "prompt": "Put butter into the microwave and then put chocolate into the location where the butter was placed.",
+      "incomplete_stages": [
+        "03_Place_Chocolate_Microwave"
+      ],
+      "event_steps_in_source_clock": [
+        235,
+        308
+      ],
+      "event_parameters": {
+        "family": "arrive",
+        "timing": "early",
+        "style": "hand",
+        "dirs": [
+          "right",
+          "front_right",
+          "back_left",
+          "back_right",
+          "front_left",
+          "left"
+        ],
+        "object": "chocolate_pudding_1",
+        "boundary": "02_Place_Butter_Microwave",
+        "instruction_step": 0,
+        "skipped": null,
+        "geo": {
+          "geo:prev_lift": 235,
+          "geo:prev_near": 358
+        },
+        "status": "done",
+        "start": 235,
+        "end": 308,
+        "released": 277,
+        "boundary_step": 362,
+        "trigger": "geo:prev_lift",
+        "dir": "right",
+        "wait_steps": 8,
+        "relocated": false,
+        "offset_to_boundary": -85,
+        "release_after_instruction": 277,
+        "settled_offset_mm": 0.0,
+        "notes": [
+          {
+            "others_drift_without_it": 0.0,
+            "drift_with_it": 0.0
+          },
+          "no_clear_path_yet",
+          "approach:side-1.2",
+          "waited_for_robot",
+          {
+            "released_at": 277
+          },
+          {
+            "settled_offset_mm": 0.0
+          }
+        ]
+      },
+      "video_event_frame_range": [
+        225,
+        298
+      ],
+      "failure_video": "02_mid_arrival/failure.mp4",
+      "clean_video": "02_mid_arrival/clean.mp4",
+      "comparison": "02_mid_arrival/comparison.jpg",
+      "failure_sha256": "64c8f5ae36835da05564b6684e6664311fca8d9fc2d629ef2d85fc452b31fc2a",
+      "clean_sha256": "cc689ed8d088b8726ffccacc682ad55eb0ddbd1b0b18bed841ee4467e17a675f",
+      "video_frames": {
+        "failure": 2500,
+        "clean": 952
+      }
+    },
+    {
+      "number": 3,
+      "condition": "mid_shift",
+      "method": "FS+Mod (MME-VLA)",
+      "task": 21,
+      "seed": 51,
+      "clean_success": true,
+      "perturbed_success": false,
+      "initial_state_sha1": "f1a38148f98f7b00de1bbd77f1e86e12e169ac67",
+      "original_condition": "displace",
+      "source_episode": "results/task_relevant/suites/mme_vla/episodes/t21_s51_mme_vla_displace",
+      "source_clean": "results/task_relevant/suites/mme_vla/episodes/t21_s51_mme_vla_clean",
+      "source_protocol": "v4.1+tr-v1",
+      "paper_parameter_match": false,
+      "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+      "prompt": "Put butter into the microwave and then put chocolate into the location where the butter was placed.",
+      "incomplete_stages": [
+        "03_Place_Chocolate_Microwave"
+      ],
+      "event_steps_in_source_clock": [
+        122,
+        185
+      ],
+      "event_parameters": {
+        "family": "displace",
+        "timing": null,
+        "style": "hand",
+        "dirs": [
+          "front_left",
+          "right",
+          "back_left",
+          "left",
+          "back_right",
+          "front_right"
+        ],
+        "object": "chocolate_pudding_1",
+        "boundary": "02_Place_Butter_Microwave",
+        "instruction_step": 0,
+        "skipped": null,
+        "geo": {
+          "geo:prev_lift": 235,
+          "geo:prev_near": 358
+        },
+        "status": "done",
+        "start": 122,
+        "end": 185,
+        "released": null,
+        "boundary_step": 362,
+        "trigger": null,
+        "dir": "front_left",
+        "wait_steps": 0,
+        "style_fallback": null,
+        "relocated": false,
+        "offset_to_boundary": -240,
+        "release_after_instruction": null,
+        "displaced_mm": 55.0,
+        "planned_mm": 55.0,
+        "notes": [
+          {
+            "others_drift_without_it": 0.0,
+            "drift_with_it": 0.0
+          },
+          {
+            "displaced_mm": 55.0,
+            "planned_mm": 55.0,
+            "tried": 1
+          }
+        ]
+      },
+      "video_event_frame_range": [
+        112,
+        175
+      ],
+      "failure_video": "03_mid_shift/failure.mp4",
+      "clean_video": "03_mid_shift/clean.mp4",
+      "comparison": "03_mid_shift/comparison.jpg",
+      "failure_sha256": "4689cd8fba4bb40edebca6a6ab37b8c09580ffd81ae1c0292eb06b86a7e74e61",
+      "clean_sha256": "cc689ed8d088b8726ffccacc682ad55eb0ddbd1b0b18bed841ee4467e17a675f",
+      "video_frames": {
+        "failure": 2500,
+        "clean": 952
+      }
+    },
+    {
+      "number": 4,
+      "condition": "remove_return",
+      "method": "FS+Mod (MME-VLA)",
+      "task": 9,
+      "seed": 52,
+      "clean_success": true,
+      "perturbed_success": false,
+      "initial_state_sha1": "8b9ff6959a355e4d7edf0eebfda86c6aeee47d69",
+      "original_condition": "takeback_early",
+      "source_episode": "results/task_relevant/suites_seqcount/mme_vla/episodes/t09_s52_mme_vla_takeback_early",
+      "source_clean": "results/task_relevant/suites_seqcount/mme_vla/episodes/t09_s52_mme_vla_clean",
+      "source_protocol": "v4.1+tr-v2",
+      "paper_parameter_match": false,
+      "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+      "prompt": "Put butter into the frypan, pour tomato sauce over it twice, then place the sauce bottle into the bowl drainer.",
+      "incomplete_stages": [
+        "03_Pour_Two"
+      ],
+      "event_steps_in_source_clock": [
+        31,
+        252
+      ],
+      "event_parameters": {
+        "family": "takeback",
+        "timing": "early",
+        "style": "hand",
+        "dirs": [
+          "right",
+          "back_left",
+          "left",
+          "front_left",
+          "front_right",
+          "back_right"
+        ],
+        "object": "tomato_sauce_1",
+        "boundary": "geo:prev_placed",
+        "instruction_step": 0,
+        "skipped": null,
+        "geo": {
+          "geo:prev_lift": 174,
+          "geo:prev_near": 244,
+          "geo:prev_placed": 326
+        },
+        "status": "done",
+        "start": 174,
+        "end": 252,
+        "released": 220,
+        "boundary_step": 326,
+        "trigger": "geo:prev_lift",
+        "dir": "right",
+        "wait_steps": 0,
+        "style_fallback": null,
+        "relocated": false,
+        "offset_to_boundary": -106,
+        "release_after_instruction": 220,
+        "away": {
+          "start": 31,
+          "released": 85,
+          "status": "done",
+          "dir": "right",
+          "spot": [
+            0.25,
+            0.1
+          ],
+          "no_visible_spot": false,
+          "away_steps": 189
+        },
+        "settled_offset_mm": 0.0,
+        "return_error": [
+          0.0,
+          0.0
+        ],
+        "notes": [
+          {
+            "others_drift_without_it": 0.0,
+            "drift_with_it": 0.0
+          },
+          "approach:side+0.0",
+          {
+            "released_at": 85
+          },
+          {
+            "settled_offset_mm": 3.2
+          },
+          "approach:side+0.0",
+          {
+            "released_at": 220
+          },
+          {
+            "settled_offset_mm": 0.0
+          },
+          {
+            "return_error": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "video_event_frame_range": [
+        21,
+        242
+      ],
+      "failure_video": "04_remove_return/failure.mp4",
+      "clean_video": "04_remove_return/clean.mp4",
+      "comparison": "04_remove_return/comparison.jpg",
+      "failure_sha256": "29403fc7ebfb850e2f051705cc9222d4839211ea0ac9589967e3d11fd5287397",
+      "clean_sha256": "56938ef03f5bb68b1771ef8e9a7ae8d41933d03cc7be9efedab667dd76f9636d",
+      "video_frames": {
+        "failure": 2500,
+        "clean": 842
+      }
+    },
+    {
+      "number": 5,
+      "condition": "tv_on",
+      "method": "FS+Mod (MME-VLA)",
+      "task": 9,
+      "seed": 52,
+      "clean_success": true,
+      "perturbed_success": false,
+      "initial_state_sha1": "8b9ff6959a355e4d7edf0eebfda86c6aeee47d69",
+      "original_condition": "inc_tv",
+      "source_episode": "results/incidental/suites/mme_vla/episodes/t09_s52_mme_vla_inc_tv",
+      "source_clean": "results/task_relevant/suites_seqcount/mme_vla/episodes/t09_s52_mme_vla_clean",
+      "source_protocol": "v4.1",
+      "paper_parameter_match": false,
+      "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+      "prompt": "Put butter into the frypan, pour tomato sauce over it twice, then place the sauce bottle into the bowl drainer.",
+      "incomplete_stages": [
+        "03_Pour_Two"
+      ],
+      "event_steps_in_source_clock": [
+        102,
+        142
+      ],
+      "event_parameters": {
+        "plan_events": [
+          {
+            "kind": "tv",
+            "at": "instruction+102",
+            "fps": 10,
+            "cut_every_s": 9.0,
+            "seed": 1019372635,
+            "role": "ambient_inc"
+          }
+        ],
+        "finished_events": []
+      },
+      "video_event_frame_range": [
+        92,
+        132
+      ],
+      "failure_video": "05_tv_on/failure.mp4",
+      "clean_video": "05_tv_on/clean.mp4",
+      "comparison": "05_tv_on/comparison.jpg",
+      "failure_sha256": "21a19d57c0801e4dd733e408becc8bdd208c3bc9dfee25f0beb13050b8cab6d8",
+      "clean_sha256": "56938ef03f5bb68b1771ef8e9a7ae8d41933d03cc7be9efedab667dd76f9636d",
+      "video_frames": {
+        "failure": 2500,
+        "clean": 842
+      }
+    },
+    {
+      "number": 6,
+      "condition": "object_passby",
+      "method": "FS+Mod (MME-VLA)",
+      "task": 9,
+      "seed": 52,
+      "clean_success": true,
+      "perturbed_success": false,
+      "initial_state_sha1": "8b9ff6959a355e4d7edf0eebfda86c6aeee47d69",
+      "original_condition": "inc_passerby",
+      "source_episode": "results/incidental/suites/mme_vla/episodes/t09_s52_mme_vla_inc_passerby",
+      "source_clean": "results/task_relevant/suites_seqcount/mme_vla/episodes/t09_s52_mme_vla_clean",
+      "source_protocol": "v4.1",
+      "paper_parameter_match": false,
+      "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+      "prompt": "Put butter into the frypan, pour tomato sauce over it twice, then place the sauce bottle into the bowl drainer.",
+      "incomplete_stages": [
+        "03_Pour_Two"
+      ],
+      "event_steps_in_source_clock": [
+        198,
+        238
+      ],
+      "event_parameters": {
+        "plan_events": [
+          {
+            "kind": "passerby",
+            "at": "instruction+198",
+            "x": -1.339,
+            "speed": 0.96,
+            "y_from": -2.6,
+            "y_to": 2.6,
+            "role": "ambient_inc"
+          },
+          {
+            "kind": "passerby",
+            "at": "instruction+2004",
+            "x": -1.323,
+            "speed": 0.91,
+            "y_from": 2.6,
+            "y_to": -2.6,
+            "role": "ambient_inc"
+          }
+        ],
+        "finished_events": [
+          {
+            "kind": "passerby",
+            "at": "instruction+198",
+            "x": -1.339,
+            "speed": 0.96,
+            "y_from": -2.6,
+            "y_to": 2.6,
+            "role": "ambient_inc",
+            "start": 198,
+            "end": 305,
+            "wait_steps": 0,
+            "notes": []
+          },
+          {
+            "kind": "passerby",
+            "at": "instruction+2004",
+            "x": -1.323,
+            "speed": 0.91,
+            "y_from": 2.6,
+            "y_to": -2.6,
+            "role": "ambient_inc",
+            "start": 2004,
+            "end": 2117,
+            "wait_steps": 0,
+            "notes": []
+          }
+        ]
+      },
+      "video_event_frame_range": [
+        188,
+        228
+      ],
+      "failure_video": "06_object_passby/failure.mp4",
+      "clean_video": "06_object_passby/clean.mp4",
+      "comparison": "06_object_passby/comparison.jpg",
+      "failure_sha256": "3bf554c575612fbeae0cc46b6d90527a3ab234e2aed8079ef57fe51a9a6e6f60",
+      "clean_sha256": "56938ef03f5bb68b1771ef8e9a7ae8d41933d03cc7be9efedab667dd76f9636d",
+      "video_frames": {
+        "failure": 2500,
+        "clean": 842
+      }
+    },
+    {
+      "number": 7,
+      "condition": "unrelated_object",
+      "method": "FS+Mod (MME-VLA)",
+      "task": 4,
+      "seed": 51,
+      "clean_success": true,
+      "perturbed_success": false,
+      "initial_state_sha1": "81e8812ab6b43ddb78786b67fef8ee6434640c26",
+      "original_condition": "inc_place",
+      "source_episode": "results/incidental/suites/mme_vla/episodes/t04_s51_mme_vla_inc_place",
+      "source_clean": "results/task_relevant/suites/mme_vla/episodes/t04_s51_mme_vla_clean",
+      "source_protocol": "v4.1",
+      "paper_parameter_match": false,
+      "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+      "prompt": "Open and close all drawers in order to check. Put butter into the drawer that already contains an object.",
+      "incomplete_stages": [
+        "08_Put_Butter_Top_Drawer",
+        "09_Close_Top_Drawer_Final"
+      ],
+      "event_steps_in_source_clock": [
+        81,
+        121
+      ],
+      "event_parameters": {
+        "plan_events": [
+          {
+            "kind": "carry_in",
+            "object": "rz_inc",
+            "at": "instruction+81",
+            "entry": "auto",
+            "target": {
+              "xy": [
+                -0.28,
+                -0.42
+              ],
+              "support_z": 0.424,
+              "yaw": 0.022,
+              "tilt": null
+            },
+            "role": "ambient_inc",
+            "style": "hand"
+          }
+        ],
+        "finished_events": [
+          {
+            "kind": "carry_in",
+            "object": "rz_inc",
+            "at": "instruction+81",
+            "entry": [
+              -0.27999985050079895,
+              -0.93,
+              0.828103590189134
+            ],
+            "target": {
+              "xy": [
+                -0.28,
+                -0.42
+              ],
+              "support_z": 0.424,
+              "yaw": 0.022,
+              "tilt": null
+            },
+            "role": "ambient_inc",
+            "style": "hand",
+            "start": 81,
+            "end": 124,
+            "wait_steps": 0,
+            "notes": [
+              {
+                "settled_target_mm": 3.0
+              },
+              {
+                "released_at": 103
+              },
+              {
+                "settled_offset_mm": 0.0
+              }
+            ]
+          }
+        ]
+      },
+      "video_event_frame_range": [
+        71,
+        111
+      ],
+      "failure_video": "07_unrelated_object/failure.mp4",
+      "clean_video": "07_unrelated_object/clean.mp4",
+      "comparison": "07_unrelated_object/comparison.jpg",
+      "failure_sha256": "078333d051304fbc4acca385c290c73cfeb5b83a5bae0d0120ea71dbcfe4de4d",
+      "clean_sha256": "2decfae720e16bdd5a8ade95ec1c7472cf00e8286dc16e16af1a294018389494",
+      "video_frames": {
+        "failure": 2500,
+        "clean": 987
+      }
+    },
+    {
+      "number": 8,
+      "condition": "target_like_object",
+      "method": "FS+Mod (MME-VLA)",
+      "task": 4,
+      "seed": 52,
+      "clean_success": true,
+      "perturbed_success": false,
+      "initial_state_sha1": "0088a327c820bebe2b46fa7496d53a247512704f",
+      "original_condition": "inc_lookalike",
+      "source_episode": "results/incidental/suites/mme_vla/episodes/t04_s52_mme_vla_inc_lookalike",
+      "source_clean": "results/task_relevant/suites/mme_vla/episodes/t04_s52_mme_vla_clean",
+      "source_protocol": "v4.1",
+      "paper_parameter_match": false,
+      "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+      "prompt": "Open and close all drawers in order to check. Put butter into the drawer that already contains an object.",
+      "incomplete_stages": [
+        "08_Put_Butter_Top_Drawer",
+        "09_Close_Top_Drawer_Final"
+      ],
+      "event_steps_in_source_clock": [
+        36,
+        76
+      ],
+      "event_parameters": {
+        "plan_events": [
+          {
+            "kind": "carry_in",
+            "object": "rz_inc",
+            "at": "instruction+36",
+            "entry": "auto",
+            "target": {
+              "xy": [
+                0.28,
+                -0.42
+              ],
+              "support_z": 0.424,
+              "yaw": -2.585,
+              "tilt": null
+            },
+            "role": "ambient_inc",
+            "style": "hand"
+          }
+        ],
+        "finished_events": [
+          {
+            "kind": "carry_in",
+            "object": "rz_inc",
+            "at": "instruction+36",
+            "entry": [
+              0.6,
+              -0.93,
+              0.82
+            ],
+            "target": {
+              "xy": [
+                0.28,
+                -0.42
+              ],
+              "support_z": 0.424,
+              "yaw": -2.585,
+              "tilt": null
+            },
+            "role": "ambient_inc",
+            "style": "hand",
+            "start": 36,
+            "end": 82,
+            "wait_steps": 0,
+            "notes": [
+              {
+                "settled_target_mm": 3.0
+              },
+              {
+                "released_at": 60
+              },
+              {
+                "settled_offset_mm": 0.0
+              }
+            ]
+          }
+        ]
+      },
+      "video_event_frame_range": [
+        26,
+        66
+      ],
+      "failure_video": "08_target_like_object/failure.mp4",
+      "clean_video": "08_target_like_object/clean.mp4",
+      "comparison": "08_target_like_object/comparison.jpg",
+      "failure_sha256": "b09d3947032a5429a5684b63cf636cdab1450fd7637ec055fbce50a6f1424e44",
+      "clean_sha256": "d48135ea204f78e7be2d587ce09aec901703befdf4ec16058758353fbc78a1c3",
+      "video_frames": {
+        "failure": 2500,
+        "clean": 987
+      }
+    },
+    {
+      "number": 9,
+      "condition": "camera_shake",
+      "method": "FS+Mod (MME-VLA)",
+      "task": 9,
+      "seed": 52,
+      "clean_success": true,
+      "perturbed_success": false,
+      "initial_state_sha1": "8b9ff6959a355e4d7edf0eebfda86c6aeee47d69",
+      "original_condition": "inc_camshake",
+      "source_episode": "results/incidental/suites/mme_vla/episodes/t09_s52_mme_vla_inc_camshake",
+      "source_clean": "results/task_relevant/suites_seqcount/mme_vla/episodes/t09_s52_mme_vla_clean",
+      "source_protocol": "v4.1",
+      "paper_parameter_match": false,
+      "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+      "prompt": "Put butter into the frypan, pour tomato sauce over it twice, then place the sauce bottle into the bowl drainer.",
+      "incomplete_stages": [
+        "03_Pour_Two"
+      ],
+      "event_steps_in_source_clock": [
+        281,
+        297
+      ],
+      "event_parameters": {
+        "plan_events": [
+          {
+            "kind": "cam_shake",
+            "at": "instruction+281",
+            "amp_m": 0.0033,
+            "amp_deg": 0.32,
+            "steps": 16,
+            "role": "ambient_inc"
+          },
+          {
+            "kind": "cam_shake",
+            "at": "instruction+1102",
+            "amp_m": 0.0056,
+            "amp_deg": 0.32,
+            "steps": 16,
+            "role": "ambient_inc"
+          },
+          {
+            "kind": "cam_shake",
+            "at": "instruction+1483",
+            "amp_m": 0.0047,
+            "amp_deg": 0.38,
+            "steps": 16,
+            "role": "ambient_inc"
+          }
+        ],
+        "finished_events": [
+          {
+            "kind": "cam_shake",
+            "at": "instruction+281",
+            "amp_m": 0.0033,
+            "amp_deg": 0.32,
+            "steps": 16,
+            "role": "ambient_inc",
+            "start": 281,
+            "end": 296,
+            "wait_steps": 0,
+            "notes": []
+          },
+          {
+            "kind": "cam_shake",
+            "at": "instruction+1102",
+            "amp_m": 0.0056,
+            "amp_deg": 0.32,
+            "steps": 16,
+            "role": "ambient_inc",
+            "start": 1102,
+            "end": 1117,
+            "wait_steps": 0,
+            "notes": []
+          },
+          {
+            "kind": "cam_shake",
+            "at": "instruction+1483",
+            "amp_m": 0.0047,
+            "amp_deg": 0.38,
+            "steps": 16,
+            "role": "ambient_inc",
+            "start": 1483,
+            "end": 1498,
+            "wait_steps": 0,
+            "notes": []
+          }
+        ]
+      },
+      "video_event_frame_range": [
+        271,
+        287
+      ],
+      "failure_video": "09_camera_shake/failure.mp4",
+      "clean_video": "09_camera_shake/clean.mp4",
+      "comparison": "09_camera_shake/comparison.jpg",
+      "failure_sha256": "e15abe804b5a826e5e25e8590483769fd90cc81191f53f3ce44727c585f8197b",
+      "clean_sha256": "56938ef03f5bb68b1771ef8e9a7ae8d41933d03cc7be9efedab667dd76f9636d",
+      "video_frames": {
+        "failure": 2500,
+        "clean": 842
+      }
+    },
+    {
+      "number": 10,
+      "condition": "light_change",
+      "method": "FS+Mod (MME-VLA)",
+      "task": 9,
+      "seed": 52,
+      "clean_success": true,
+      "perturbed_success": false,
+      "initial_state_sha1": "8b9ff6959a355e4d7edf0eebfda86c6aeee47d69",
+      "original_condition": "inc_light",
+      "source_episode": "results/incidental/suites/mme_vla/episodes/t09_s52_mme_vla_inc_light",
+      "source_clean": "results/task_relevant/suites_seqcount/mme_vla/episodes/t09_s52_mme_vla_clean",
+      "source_protocol": "v4.1",
+      "paper_parameter_match": false,
+      "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+      "prompt": "Put butter into the frypan, pour tomato sauce over it twice, then place the sauce bottle into the bowl drainer.",
+      "incomplete_stages": [
+        "03_Pour_Two"
+      ],
+      "event_steps_in_source_clock": [
+        250,
+        290
+      ],
+      "event_parameters": {
+        "plan_events": [
+          {
+            "kind": "lamp",
+            "at": "instruction+250",
+            "on_steps": 315,
+            "role": "ambient_inc"
+          }
+        ],
+        "finished_events": [
+          {
+            "kind": "lamp",
+            "at": "instruction+250",
+            "on_steps": 315,
+            "role": "ambient_inc",
+            "start": 250,
+            "end": 564,
+            "wait_steps": 0,
+            "notes": []
+          }
+        ]
+      },
+      "video_event_frame_range": [
+        240,
+        280
+      ],
+      "failure_video": "10_light_change/failure.mp4",
+      "clean_video": "10_light_change/clean.mp4",
+      "comparison": "10_light_change/comparison.jpg",
+      "failure_sha256": "db6ed8bbd60cf5169c130877f77d970ef85ea5e46b8baa5110c96253402ed4b2",
+      "clean_sha256": "56938ef03f5bb68b1771ef8e9a7ae8d41933d03cc7be9efedab667dd76f9636d",
+      "video_frames": {
+        "failure": 2500,
+        "clean": 842
+      }
+    }
+  ]
+}

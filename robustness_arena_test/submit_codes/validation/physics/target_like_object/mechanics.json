@@ -1,0 +1,29 @@
+{
+  "condition": "target_like_object",
+  "variant": "insert",
+  "style": "handin",
+  "target": "cream_cheese_1",
+  "start": 40,
+  "end": 280,
+  "first_manipulation": 56,
+  "target_manipulation": null,
+  "valid": true,
+  "invalid_reason": null,
+  "visible_control_steps": 240,
+  "paper_default_timing_met": true,
+  "initial_scene_sha256": "f1b3d101ab2528ce760dc52dc2aec1939e42a298edd72c772df1247addde93dc",
+  "events": [
+    {
+      "step": 40,
+      "event": "start"
+    },
+    {
+      "step": 60,
+      "stage": "mechanics_test_first_stage"
+    },
+    {
+      "step": 280,
+      "event": "end"
+    }
+  ]
+}

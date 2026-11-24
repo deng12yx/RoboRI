@@ -1,0 +1,5 @@
+{
+  "qwen_checkpoint": "/path/to/Qwen3-VL-4B-Instruct",
+  "memer_adapter": "/path/to/Arena-MemER-adapter",
+  "retrieval_checkpoint": "/path/to/siglip-so400m-patch14-384"
+}

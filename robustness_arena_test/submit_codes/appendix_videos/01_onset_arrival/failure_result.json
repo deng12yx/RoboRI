@@ -1,0 +1,138 @@
+{
+ "id": "t09_s52_mme_vla_onset_sync",
+ "task": 9,
+ "seed": 52,
+ "mode": "mme_vla",
+ "method": "mme_vla",
+ "suite_category": "Counting",
+ "tier": null,
+ "status": "completed",
+ "error": null,
+ "worker": "1",
+ "vla_gpu": "3",
+ "vlm_gpu": "3",
+ "started_utc": "2026-10-27T07:51:39+00:00",
+ "finished_utc": "2026-10-27T07:54:20+00:00",
+ "prompt": "Put butter into the frypan, pour tomato sauce over it twice, then place the sauce bottle into the bowl drainer.",
+ "csr": 0.666667,
+ "tsr": 0,
+ "stage_score_pct": 66.66666666666667,
+ "stage_done": {
+  "01_Lift_Tomato_Sauce": true,
+  "02_Pour_One": true,
+  "03_Pour_Two": false
+ },
+ "diagnostics": {
+  "stage_success": false,
+  "extra_pour_detected": false,
+  "pour_1_step": 717,
+  "pour_2_step": null,
+  "extra_monitor_end_step": null,
+  "failure_reason": "incomplete_stage"
+ },
+ "policy_steps": 2500,
+ "env_steps": 2510,
+ "wall_sec": 156.3262,
+ "init_state_sha1": "8b9ff6959a355e4d7edf0eebfda86c6aeee47d69",
+ "reset_retries": 0,
+ "s1": {
+  "calls": 125,
+  "latency": {
+   "n": 125,
+   "median": 0.2272,
+   "p90": 0.3596,
+   "mean": 0.4763
+  },
+  "chunk_period": {
+   "n": 0
+  }
+ },
+ "s2": {
+  "calls": 0,
+  "errors": 0,
+  "latency": {
+   "n": 0
+  },
+  "update_period": {
+   "n": 0
+  },
+  "steps_between_updates": {
+   "n": 0
+  },
+  "staleness_steps": {
+   "n": 0
+  },
+  "s1_chunks_per_update": null
+ },
+ "memory": {
+  "max_K": 32,
+  "final_K": 0,
+  "calls_with_history": 124,
+  "candidate_frames": 0,
+  "final_keyframes": [],
+  "memory_frames_used_max": 32,
+  "memory_frames_stored_max": 2481,
+  "memory_span_steps_max": 2480
+ },
+ "primitives": [],
+ "prompt_switches": 0,
+ "stage_events": [
+  {
+   "t": 557,
+   "stage": "01_Lift_Tomato_Sauce",
+   "wall": 30.3929
+  },
+  {
+   "t": 717,
+   "stage": "02_Pour_One",
+   "wall": 38.9404
+  }
+ ],
+ "realism": {
+  "condition": "onset_sync",
+  "version": "v4.1+tr-v1",
+  "instruction_step": 120,
+  "scene_complete_step": null,
+  "hold": null,
+  "hold_change": null,
+  "prephase_frames": 120,
+  "prephase_frames_to_memory": 0,
+  "events_done": {
+   "carry_in": 1
+  },
+  "events_not_finished": [],
+  "contacts": 0,
+  "boot_contacts": 0,
+  "robot_wait_steps": 0,
+  "relocations": [],
+  "official_qpos_sha1": "8b9ff6959a355e4d7edf0eebfda86c6aeee47d69",
+  "tr": {
+   "family": "onset",
+   "timing": "sync",
+   "style": "hand",
+   "object": "butter_1",
+   "boundary": "geo:prev_placed",
+   "release_offset_planned": 3,
+   "instruction_step": 120,
+   "skipped": null,
+   "geo": {
+    "geo:prev_lift": 295,
+    "geo:prev_near": 365,
+    "geo:prev_placed": 446
+   },
+   "status": "done",
+   "start": 88,
+   "end": 154,
+   "released": 123,
+   "boundary_step": 446,
+   "trigger": "release_at",
+   "dir": "right",
+   "wait_steps": 0,
+   "style_fallback": null,
+   "relocated": false,
+   "offset_to_boundary": -323,
+   "release_after_instruction": 3,
+   "settled_offset_mm": 0.0
+  }
+ }
+}

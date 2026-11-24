@@ -1,0 +1,110 @@
+{
+ "id": "t09_s52_mme_vla_inc_light",
+ "task": 9,
+ "seed": 52,
+ "mode": "mme_vla",
+ "method": "mme_vla",
+ "suite_category": "Counting",
+ "tier": null,
+ "status": "completed",
+ "error": null,
+ "worker": "22",
+ "vla_gpu": "4",
+ "vlm_gpu": "4",
+ "started_utc": "2026-10-30T06:28:29+00:00",
+ "finished_utc": "2026-10-30T06:31:02+00:00",
+ "prompt": "Put butter into the frypan, pour tomato sauce over it twice, then place the sauce bottle into the bowl drainer.",
+ "csr": 0.666667,
+ "tsr": 0,
+ "stage_score_pct": 66.66666666666667,
+ "stage_done": {
+  "01_Lift_Tomato_Sauce": true,
+  "02_Pour_One": true,
+  "03_Pour_Two": false
+ },
+ "diagnostics": {
+  "stage_success": false,
+  "extra_pour_detected": false,
+  "pour_1_step": 1113,
+  "pour_2_step": null,
+  "extra_monitor_end_step": null,
+  "failure_reason": "incomplete_stage"
+ },
+ "policy_steps": 2500,
+ "env_steps": 2510,
+ "wall_sec": 148.3934,
+ "init_state_sha1": "8b9ff6959a355e4d7edf0eebfda86c6aeee47d69",
+ "reset_retries": 0,
+ "s1": {
+  "calls": 125,
+  "latency": {
+   "n": 125,
+   "median": 0.2137,
+   "p90": 0.4253,
+   "mean": 0.4508
+  },
+  "chunk_period": {
+   "n": 0
+  }
+ },
+ "s2": {
+  "calls": 0,
+  "errors": 0,
+  "latency": {
+   "n": 0
+  },
+  "update_period": {
+   "n": 0
+  },
+  "steps_between_updates": {
+   "n": 0
+  },
+  "staleness_steps": {
+   "n": 0
+  },
+  "s1_chunks_per_update": null
+ },
+ "memory": {
+  "max_K": 32,
+  "final_K": 0,
+  "calls_with_history": 124,
+  "candidate_frames": 0,
+  "final_keyframes": [],
+  "memory_frames_used_max": 32,
+  "memory_frames_stored_max": 2481,
+  "memory_span_steps_max": 2480
+ },
+ "primitives": [],
+ "prompt_switches": 0,
+ "stage_events": [
+  {
+   "t": 556,
+   "stage": "01_Lift_Tomato_Sauce",
+   "wall": 38.7187
+  },
+  {
+   "t": 1113,
+   "stage": "02_Pour_One",
+   "wall": 78.714
+  }
+ ],
+ "realism": {
+  "condition": "inc_light",
+  "version": "v4.1",
+  "instruction_step": 0,
+  "scene_complete_step": null,
+  "hold": null,
+  "hold_change": null,
+  "prephase_frames": 0,
+  "prephase_frames_to_memory": 0,
+  "events_done": {
+   "lamp": 1
+  },
+  "events_not_finished": [],
+  "contacts": 0,
+  "boot_contacts": 0,
+  "robot_wait_steps": 0,
+  "relocations": [],
+  "official_qpos_sha1": "8b9ff6959a355e4d7edf0eebfda86c6aeee47d69"
+ }
+}

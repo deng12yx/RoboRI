@@ -1,0 +1,11 @@
+number,condition,method,task,seed,clean_success,perturbed_success,original_condition,paper_parameter_match,failure_video,clean_video
+1,onset_arrival,FS+Mod (MME-VLA),9,52,True,False,onset_sync,False,01_onset_arrival/failure.mp4,01_onset_arrival/clean.mp4
+2,mid_arrival,FS+Mod (MME-VLA),21,51,True,False,arrive_early,False,02_mid_arrival/failure.mp4,02_mid_arrival/clean.mp4
+3,mid_shift,FS+Mod (MME-VLA),21,51,True,False,displace,False,03_mid_shift/failure.mp4,03_mid_shift/clean.mp4
+4,remove_return,FS+Mod (MME-VLA),9,52,True,False,takeback_early,False,04_remove_return/failure.mp4,04_remove_return/clean.mp4
+5,tv_on,FS+Mod (MME-VLA),9,52,True,False,inc_tv,False,05_tv_on/failure.mp4,05_tv_on/clean.mp4
+6,object_passby,FS+Mod (MME-VLA),9,52,True,False,inc_passerby,False,06_object_passby/failure.mp4,06_object_passby/clean.mp4
+7,unrelated_object,FS+Mod (MME-VLA),4,51,True,False,inc_place,False,07_unrelated_object/failure.mp4,07_unrelated_object/clean.mp4
+8,target_like_object,FS+Mod (MME-VLA),4,52,True,False,inc_lookalike,False,08_target_like_object/failure.mp4,08_target_like_object/clean.mp4
+9,camera_shake,FS+Mod (MME-VLA),9,52,True,False,inc_camshake,False,09_camera_shake/failure.mp4,09_camera_shake/clean.mp4
+10,light_change,FS+Mod (MME-VLA),9,52,True,False,inc_light,False,10_light_change/failure.mp4,10_light_change/clean.mp4

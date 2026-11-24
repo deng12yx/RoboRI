@@ -1,0 +1,21 @@
+{
+  "python": "3.11.17",
+  "interpreter": "/home/yangxiang/Projects/LAPSE/robomme_policy_learning/.venv/bin/python",
+  "packages": {
+    "numpy": "1.26.4",
+    "Pillow": "11.2.1",
+    "torch": "2.7.1",
+    "transformers": "4.53.2",
+    "jax": "0.5.3",
+    "jaxlib": "0.5.3",
+    "flax": "0.10.2",
+    "optax": "0.2.4",
+    "mujoco": "2.3.7",
+    "imageio": "2.37.0",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "opencv-python": "4.11.0.86",
+    "h5py": "3.13.0",
+    "websockets": "15.0.1"
+  }
+}

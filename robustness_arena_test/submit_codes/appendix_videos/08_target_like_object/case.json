@@ -1,0 +1,96 @@
+{
+  "number": 8,
+  "condition": "target_like_object",
+  "method": "FS+Mod (MME-VLA)",
+  "task": 4,
+  "seed": 52,
+  "clean_success": true,
+  "perturbed_success": false,
+  "initial_state_sha1": "0088a327c820bebe2b46fa7496d53a247512704f",
+  "original_condition": "inc_lookalike",
+  "source_episode": "results/incidental/suites/mme_vla/episodes/t04_s52_mme_vla_inc_lookalike",
+  "source_clean": "results/task_relevant/suites/mme_vla/episodes/t04_s52_mme_vla_clean",
+  "source_protocol": "v4.1",
+  "paper_parameter_match": false,
+  "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+  "prompt": "Open and close all drawers in order to check. Put butter into the drawer that already contains an object.",
+  "incomplete_stages": [
+    "08_Put_Butter_Top_Drawer",
+    "09_Close_Top_Drawer_Final"
+  ],
+  "event_steps_in_source_clock": [
+    36,
+    76
+  ],
+  "event_parameters": {
+    "plan_events": [
+      {
+        "kind": "carry_in",
+        "object": "rz_inc",
+        "at": "instruction+36",
+        "entry": "auto",
+        "target": {
+          "xy": [
+            0.28,
+            -0.42
+          ],
+          "support_z": 0.424,
+          "yaw": -2.585,
+          "tilt": null
+        },
+        "role": "ambient_inc",
+        "style": "hand"
+      }
+    ],
+    "finished_events": [
+      {
+        "kind": "carry_in",
+        "object": "rz_inc",
+        "at": "instruction+36",
+        "entry": [
+          0.6,
+          -0.93,
+          0.82
+        ],
+        "target": {
+          "xy": [
+            0.28,
+            -0.42
+          ],
+          "support_z": 0.424,
+          "yaw": -2.585,
+          "tilt": null
+        },
+        "role": "ambient_inc",
+        "style": "hand",
+        "start": 36,
+        "end": 82,
+        "wait_steps": 0,
+        "notes": [
+          {
+            "settled_target_mm": 3.0
+          },
+          {
+            "released_at": 60
+          },
+          {
+            "settled_offset_mm": 0.0
+          }
+        ]
+      }
+    ]
+  },
+  "video_event_frame_range": [
+    26,
+    66
+  ],
+  "failure_video": "08_target_like_object/failure.mp4",
+  "clean_video": "08_target_like_object/clean.mp4",
+  "comparison": "08_target_like_object/comparison.jpg",
+  "failure_sha256": "b09d3947032a5429a5684b63cf636cdab1450fd7637ec055fbce50a6f1424e44",
+  "clean_sha256": "d48135ea204f78e7be2d587ce09aec901703befdf4ec16058758353fbc78a1c3",
+  "video_frames": {
+    "failure": 2500,
+    "clean": 987
+  }
+}

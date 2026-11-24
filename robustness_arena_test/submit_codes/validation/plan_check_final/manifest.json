@@ -1,0 +1,1678 @@
+{
+  "schema": 1,
+  "config": {
+    "tasks": [
+      25,
+      21
+    ],
+    "seeds": [
+      50,
+      51
+    ],
+    "conditions": [
+      "clean",
+      "onset_arrival",
+      "mid_arrival",
+      "mid_shift",
+      "remove_return",
+      "tv_on",
+      "object_passby",
+      "unrelated_object",
+      "target_like_object",
+      "camera_shake",
+      "light_change"
+    ],
+    "methods": [
+      "fs_mod",
+      "simplememvla",
+      "fs_mod_ri",
+      "simplememvla_ri"
+    ],
+    "runtime": {
+      "max_steps": 2500,
+      "post_goal_steps": 200
+    },
+    "video": true,
+    "backends": {
+      "fs_mod": {
+        "port": 8801
+      },
+      "fs_mod_retrieval": {
+        "port": 8802
+      },
+      "fs_mod_ri": {
+        "port": 8803
+      },
+      "pi05": {
+        "port": 8800
+      },
+      "memer": {
+        "port": 8800
+      },
+      "predimem": {
+        "port": 8800,
+        "planner_device": "cuda:0"
+      },
+      "traceflow": {
+        "upper_port": 8830,
+        "lower_port": 8831
+      }
+    },
+    "provenance": {
+      "source_sha256": {
+        "robo_ri/__init__.py": "a829a5c6dd58d6a83c562cd7815a9f801af8a7c940deaffc609291adece2b2bb",
+        "robo_ri/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+        "robo_ri/analysis.py": "a85d7bc5d1d4870d9f36d2966ce00c2761005eff3e9134db1344184d3e7a803a",
+        "robo_ri/arena.py": "53b4d28ed2f636bd30fd129fe6973ad47668f4e5c38e7a1854c2a204641ab675",
+        "robo_ri/baselines.py": "0a9d062401c3830abadc5114f16e456f91e85657c9bdeeaf599ede475f863148",
+        "robo_ri/calibration.py": "874d83bac548ae2029bba8c6842766f33f913b94c5b2063e9e51731561ae30fb",
+        "robo_ri/cli.py": "1573b498b4802cc94cc3707d7b5f2c85d2ea5e60a9eccf3a8365abcefe8d2330",
+        "robo_ri/collect.py": "ab4570ac7edd33bc6357e4a9b6be9a65a47b04429b64458785a0308d3bd8274a",
+        "robo_ri/paths.py": "9f010fe7302d19f2fede468f6dd8b84a1a7f4cb82ba6c168d7c37b9e2589bec9",
+        "robo_ri/perturbations.py": "569f1ff1e7057d9a0eea47b041aebaacd206431c795802ac640abfef21024b7f",
+        "robo_ri/protocol.py": "a58a80697bd1843ff57cfb650ca8f7119499924cf4dda8ae331deb5071db455e",
+        "robo_ri/retrieval.py": "e97439b111cd0ebc72c20c9eb4ba379973e70f64b2c939e0093737f51f5f81c6",
+        "robo_ri/ri_mem/__init__.py": "8a74c9ca161f2cb08a63de3947bfeee70fb46cf62cb6472a22bbef02baee0d75",
+        "robo_ri/ri_mem/attention.py": "68eace424fa1f9b2edfa0d5c0a72ca3852fb7c23587b0d81bae5607861d7bae9",
+        "robo_ri/ri_mem/bindings.py": "cc5ad14bf757ba85df0484bf95373653674d2b03b33cde9320d428bd765d781f",
+        "robo_ri/ri_mem/engine.py": "7fb1feaeca31c56df8f7b34b9843beeac0081971e875c7da1f471a71198fced8",
+        "robo_ri/ri_mem/evidence.py": "9c244a214b7d9834e62ab8eaa62b6fb447b09ee7c4c044dd86d3d6893b172ca9",
+        "robo_ri/ri_mem/head.py": "7612b49c6724f39579fa50adf672f90347f8abd692faab683b038af99e581e13",
+        "robo_ri/ri_mem/query.py": "df60f426c51a88f5839d1d8c9c106826cb457733f343bd476c47a634b0361bc2",
+        "robo_ri/ri_mem/tracking.py": "89e06903458e0390e2127c5afe82bebe55fc4567e9ca75bb8f6688d35b6c388b",
+        "robo_ri/runner.py": "82cd07b75e7966aa5e48361f497a96c486aa47f0b4b8f3feaef4983d4c8c277f",
+        "robo_ri/server.py": "ba917d6a0ae73a97e1805e5c1f87317cb902b29dda7423f504f861ba0d787968"
+      },
+      "paper_sha256": {
+        "Robo_RI_CVPR27.pdf": "611d8cb7b512fe3974d77939eb872a304f40beae9725ce779235353ac93d81e0",
+        "Robo_RI_CVPR27_supplement.pdf": "748640efa3b32cc86a8953ba2cee66a2a1a22e38eecff6aadbdefbad2415861f"
+      }
+    }
+  },
+  "jobs": [
+    {
+      "id": "fs_mod__t25_s50__clean",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 50,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s50__onset_arrival",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 50,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s50__mid_arrival",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 50,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s50__mid_shift",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 50,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s50__remove_return",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 50,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s50__tv_on",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 50,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s50__object_passby",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 50,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s50__unrelated_object",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 50,
+      "condition": "unrelated_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s50__target_like_object",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 50,
+      "condition": "target_like_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s50__camera_shake",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 50,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s50__light_change",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 50,
+      "condition": "light_change",
+      "variant": "bright",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s51__clean",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s51__onset_arrival",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s51__mid_arrival",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s51__mid_shift",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s51__remove_return",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s51__tv_on",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s51__object_passby",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s51__unrelated_object",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "unrelated_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s51__target_like_object",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "target_like_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s51__camera_shake",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t25_s51__light_change",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "light_change",
+      "variant": "dark",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s50__clean",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 50,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s50__onset_arrival",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 50,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s50__mid_arrival",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 50,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s50__mid_shift",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 50,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s50__remove_return",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 50,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s50__tv_on",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 50,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s50__object_passby",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 50,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s50__unrelated_object",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 50,
+      "condition": "unrelated_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s50__target_like_object",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 50,
+      "condition": "target_like_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s50__camera_shake",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 50,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s50__light_change",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 50,
+      "condition": "light_change",
+      "variant": "bright",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s51__clean",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 51,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s51__onset_arrival",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 51,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s51__mid_arrival",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 51,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s51__mid_shift",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 51,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s51__remove_return",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 51,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s51__tv_on",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 51,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s51__object_passby",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 51,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s51__unrelated_object",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 51,
+      "condition": "unrelated_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s51__target_like_object",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 51,
+      "condition": "target_like_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s51__camera_shake",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 51,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod__t21_s51__light_change",
+      "method": "fs_mod",
+      "task": 21,
+      "seed": 51,
+      "condition": "light_change",
+      "variant": "dark",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s50__clean",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 50,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s50__onset_arrival",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 50,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s50__mid_arrival",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 50,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s50__mid_shift",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 50,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s50__remove_return",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 50,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s50__tv_on",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 50,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s50__object_passby",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 50,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s50__unrelated_object",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 50,
+      "condition": "unrelated_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s50__target_like_object",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 50,
+      "condition": "target_like_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s50__camera_shake",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 50,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s50__light_change",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 50,
+      "condition": "light_change",
+      "variant": "bright",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s51__clean",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 51,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s51__onset_arrival",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 51,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s51__mid_arrival",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 51,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s51__mid_shift",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 51,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s51__remove_return",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 51,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s51__tv_on",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 51,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s51__object_passby",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 51,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s51__unrelated_object",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 51,
+      "condition": "unrelated_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s51__target_like_object",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 51,
+      "condition": "target_like_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s51__camera_shake",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 51,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t25_s51__light_change",
+      "method": "simplememvla",
+      "task": 25,
+      "seed": 51,
+      "condition": "light_change",
+      "variant": "dark",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s50__clean",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 50,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s50__onset_arrival",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 50,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s50__mid_arrival",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 50,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s50__mid_shift",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 50,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s50__remove_return",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 50,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s50__tv_on",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 50,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s50__object_passby",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 50,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s50__unrelated_object",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 50,
+      "condition": "unrelated_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s50__target_like_object",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 50,
+      "condition": "target_like_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s50__camera_shake",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 50,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s50__light_change",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 50,
+      "condition": "light_change",
+      "variant": "bright",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s51__clean",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 51,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s51__onset_arrival",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 51,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s51__mid_arrival",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 51,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s51__mid_shift",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 51,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s51__remove_return",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 51,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s51__tv_on",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 51,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s51__object_passby",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 51,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s51__unrelated_object",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 51,
+      "condition": "unrelated_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s51__target_like_object",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 51,
+      "condition": "target_like_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s51__camera_shake",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 51,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla__t21_s51__light_change",
+      "method": "simplememvla",
+      "task": 21,
+      "seed": 51,
+      "condition": "light_change",
+      "variant": "dark",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s50__clean",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s50__onset_arrival",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s50__mid_arrival",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s50__mid_shift",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s50__remove_return",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s50__tv_on",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s50__object_passby",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s50__unrelated_object",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "unrelated_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s50__target_like_object",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "target_like_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s50__camera_shake",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s50__light_change",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "light_change",
+      "variant": "bright",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s51__clean",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s51__onset_arrival",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s51__mid_arrival",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s51__mid_shift",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s51__remove_return",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s51__tv_on",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s51__object_passby",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s51__unrelated_object",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "unrelated_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s51__target_like_object",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "target_like_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s51__camera_shake",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t25_s51__light_change",
+      "method": "fs_mod_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "light_change",
+      "variant": "dark",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s50__clean",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s50__onset_arrival",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s50__mid_arrival",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s50__mid_shift",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s50__remove_return",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s50__tv_on",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s50__object_passby",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s50__unrelated_object",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "unrelated_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s50__target_like_object",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "target_like_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s50__camera_shake",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s50__light_change",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "light_change",
+      "variant": "bright",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s51__clean",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s51__onset_arrival",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s51__mid_arrival",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s51__mid_shift",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s51__remove_return",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s51__tv_on",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s51__object_passby",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s51__unrelated_object",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "unrelated_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s51__target_like_object",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "target_like_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s51__camera_shake",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "fs_mod_ri__t21_s51__light_change",
+      "method": "fs_mod_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "light_change",
+      "variant": "dark",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s50__clean",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s50__onset_arrival",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s50__mid_arrival",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s50__mid_shift",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s50__remove_return",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s50__tv_on",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s50__object_passby",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s50__unrelated_object",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "unrelated_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s50__target_like_object",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "target_like_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s50__camera_shake",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s50__light_change",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 50,
+      "condition": "light_change",
+      "variant": "bright",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s51__clean",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s51__onset_arrival",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s51__mid_arrival",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s51__mid_shift",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s51__remove_return",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s51__tv_on",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s51__object_passby",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s51__unrelated_object",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "unrelated_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s51__target_like_object",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "target_like_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s51__camera_shake",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t25_s51__light_change",
+      "method": "simplememvla_ri",
+      "task": 25,
+      "seed": 51,
+      "condition": "light_change",
+      "variant": "dark",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s50__clean",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s50__onset_arrival",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s50__mid_arrival",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s50__mid_shift",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s50__remove_return",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s50__tv_on",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s50__object_passby",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s50__unrelated_object",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "unrelated_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s50__target_like_object",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "target_like_object",
+      "variant": "insert",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s50__camera_shake",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s50__light_change",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 50,
+      "condition": "light_change",
+      "variant": "bright",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s51__clean",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s51__onset_arrival",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "onset_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s51__mid_arrival",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "mid_arrival",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s51__mid_shift",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s51__remove_return",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "remove_return",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s51__tv_on",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "tv_on",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s51__object_passby",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "object_passby",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s51__unrelated_object",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "unrelated_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s51__target_like_object",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "target_like_object",
+      "variant": "remove",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s51__camera_shake",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "camera_shake",
+      "variant": "default",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    },
+    {
+      "id": "simplememvla_ri__t21_s51__light_change",
+      "method": "simplememvla_ri",
+      "task": 21,
+      "seed": 51,
+      "condition": "light_change",
+      "variant": "dark",
+      "protocol_hash": "76878a2ac8ab6c66deade1a491779554a29efdb74e0cb97b7bc74b7f63e7da78"
+    }
+  ]
+}

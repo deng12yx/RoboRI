@@ -1,0 +1,141 @@
+{
+ "id": "t04_s52_mme_vla_inc_lookalike",
+ "task": 4,
+ "seed": 52,
+ "mode": "mme_vla",
+ "method": "mme_vla",
+ "suite_category": "Occlusion",
+ "tier": "hard",
+ "status": "completed",
+ "error": null,
+ "worker": "23",
+ "vla_gpu": "4",
+ "vlm_gpu": "4",
+ "started_utc": "2026-10-30T01:05:14+00:00",
+ "finished_utc": "2026-10-30T01:07:29+00:00",
+ "prompt": "Open and close all drawers in order to check. Put butter into the drawer that already contains an object.",
+ "csr": 0.875,
+ "tsr": 0,
+ "stage_score_pct": 87.5,
+ "stage_done": {
+  "01_Open_Top_Drawer": true,
+  "02_Close_Top_Drawer": true,
+  "03_Open_Middle_Drawer": true,
+  "04_Close_Middle_Drawer": true,
+  "05_Open_Bottom_Drawer": true,
+  "06_Close_Bottom_Drawer": true,
+  "07_Open_Top_Drawer_Again": true,
+  "08_Put_Butter_Top_Drawer": false,
+  "09_Close_Top_Drawer_Final": false
+ },
+ "diagnostics": {
+  "stage_success": false,
+  "extra_pour_detected": false,
+  "pour_1_step": null,
+  "pour_2_step": null,
+  "extra_monitor_end_step": null,
+  "failure_reason": "incomplete_stage"
+ },
+ "policy_steps": 2500,
+ "env_steps": 2510,
+ "wall_sec": 131.2933,
+ "init_state_sha1": "0088a327c820bebe2b46fa7496d53a247512704f",
+ "reset_retries": 0,
+ "s1": {
+  "calls": 125,
+  "latency": {
+   "n": 125,
+   "median": 0.2488,
+   "p90": 0.425,
+   "mean": 0.2994
+  },
+  "chunk_period": {
+   "n": 0
+  }
+ },
+ "s2": {
+  "calls": 0,
+  "errors": 0,
+  "latency": {
+   "n": 0
+  },
+  "update_period": {
+   "n": 0
+  },
+  "steps_between_updates": {
+   "n": 0
+  },
+  "staleness_steps": {
+   "n": 0
+  },
+  "s1_chunks_per_update": null
+ },
+ "memory": {
+  "max_K": 32,
+  "final_K": 0,
+  "calls_with_history": 124,
+  "candidate_frames": 0,
+  "final_keyframes": [],
+  "memory_frames_used_max": 32,
+  "memory_frames_stored_max": 2481,
+  "memory_span_steps_max": 2480
+ },
+ "primitives": [],
+ "prompt_switches": 0,
+ "stage_events": [
+  {
+   "t": 84,
+   "stage": "01_Open_Top_Drawer",
+   "wall": 9.9631
+  },
+  {
+   "t": 125,
+   "stage": "02_Close_Top_Drawer",
+   "wall": 12.722
+  },
+  {
+   "t": 210,
+   "stage": "03_Open_Middle_Drawer",
+   "wall": 18.3639
+  },
+  {
+   "t": 251,
+   "stage": "04_Close_Middle_Drawer",
+   "wall": 20.7316
+  },
+  {
+   "t": 664,
+   "stage": "05_Open_Bottom_Drawer",
+   "wall": 43.3281
+  },
+  {
+   "t": 711,
+   "stage": "06_Close_Bottom_Drawer",
+   "wall": 45.3129
+  },
+  {
+   "t": 1597,
+   "stage": "07_Open_Top_Drawer_Again",
+   "wall": 85.7339
+  }
+ ],
+ "realism": {
+  "condition": "inc_lookalike",
+  "version": "v4.1",
+  "instruction_step": 0,
+  "scene_complete_step": null,
+  "hold": null,
+  "hold_change": null,
+  "prephase_frames": 0,
+  "prephase_frames_to_memory": 0,
+  "events_done": {
+   "carry_in": 1
+  },
+  "events_not_finished": [],
+  "contacts": 0,
+  "boot_contacts": 0,
+  "robot_wait_steps": 0,
+  "relocations": [],
+  "official_qpos_sha1": "0088a327c820bebe2b46fa7496d53a247512704f"
+ }
+}

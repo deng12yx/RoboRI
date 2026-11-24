@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "config": {
+    "tasks": [
+      25
+    ],
+    "seeds": [
+      51
+    ],
+    "conditions": [
+      "clean",
+      "mid_shift",
+      "light_change"
+    ],
+    "methods": [
+      "fs_mod"
+    ],
+    "runtime": {
+      "max_steps": 2500,
+      "post_goal_steps": 200
+    },
+    "video": true,
+    "backends": {
+      "fs_mod": {
+        "port": 18981
+      },
+      "fs_mod_retrieval": {
+        "port": 8802
+      },
+      "fs_mod_ri": {
+        "port": 8803
+      },
+      "pi05": {
+        "port": 8800
+      },
+      "memer": {
+        "port": 8800
+      },
+      "predimem": {
+        "port": 8800,
+        "planner_device": "cuda:0"
+      },
+      "traceflow": {
+        "upper_port": 8830,
+        "lower_port": 8831
+      }
+    },
+    "validation_only": true
+  },
+  "jobs": [
+    {
+      "id": "fs_mod__t25_s51__clean",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "clean",
+      "variant": "default",
+      "protocol_hash": "e9407f4dd394966706ce61996c4d11340164ccda4f3318ef772698984a062fd9"
+    },
+    {
+      "id": "fs_mod__t25_s51__mid_shift",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "mid_shift",
+      "variant": "default",
+      "protocol_hash": "e9407f4dd394966706ce61996c4d11340164ccda4f3318ef772698984a062fd9"
+    },
+    {
+      "id": "fs_mod__t25_s51__light_change",
+      "method": "fs_mod",
+      "task": 25,
+      "seed": 51,
+      "condition": "light_change",
+      "variant": "dark",
+      "protocol_hash": "e9407f4dd394966706ce61996c4d11340164ccda4f3318ef772698984a062fd9"
+    }
+  ]
+}

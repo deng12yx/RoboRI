@@ -1,0 +1,85 @@
+{
+  "number": 2,
+  "condition": "mid_arrival",
+  "method": "FS+Mod (MME-VLA)",
+  "task": 21,
+  "seed": 51,
+  "clean_success": true,
+  "perturbed_success": false,
+  "initial_state_sha1": "f1a38148f98f7b00de1bbd77f1e86e12e169ac67",
+  "original_condition": "arrive_early",
+  "source_episode": "results/task_relevant/suites/mme_vla/episodes/t21_s51_mme_vla_arrive_early",
+  "source_clean": "results/task_relevant/suites/mme_vla/episodes/t21_s51_mme_vla_clean",
+  "source_protocol": "v4.1+tr-v1",
+  "paper_parameter_match": false,
+  "usage_note": "Recorded legacy Arena event: same perturbation family; parameters differ from paper Table 2. Qualitative example only.",
+  "prompt": "Put butter into the microwave and then put chocolate into the location where the butter was placed.",
+  "incomplete_stages": [
+    "03_Place_Chocolate_Microwave"
+  ],
+  "event_steps_in_source_clock": [
+    235,
+    308
+  ],
+  "event_parameters": {
+    "family": "arrive",
+    "timing": "early",
+    "style": "hand",
+    "dirs": [
+      "right",
+      "front_right",
+      "back_left",
+      "back_right",
+      "front_left",
+      "left"
+    ],
+    "object": "chocolate_pudding_1",
+    "boundary": "02_Place_Butter_Microwave",
+    "instruction_step": 0,
+    "skipped": null,
+    "geo": {
+      "geo:prev_lift": 235,
+      "geo:prev_near": 358
+    },
+    "status": "done",
+    "start": 235,
+    "end": 308,
+    "released": 277,
+    "boundary_step": 362,
+    "trigger": "geo:prev_lift",
+    "dir": "right",
+    "wait_steps": 8,
+    "relocated": false,
+    "offset_to_boundary": -85,
+    "release_after_instruction": 277,
+    "settled_offset_mm": 0.0,
+    "notes": [
+      {
+        "others_drift_without_it": 0.0,
+        "drift_with_it": 0.0
+      },
+      "no_clear_path_yet",
+      "approach:side-1.2",
+      "waited_for_robot",
+      {
+        "released_at": 277
+      },
+      {
+        "settled_offset_mm": 0.0
+      }
+    ]
+  },
+  "video_event_frame_range": [
+    225,
+    298
+  ],
+  "failure_video": "02_mid_arrival/failure.mp4",
+  "clean_video": "02_mid_arrival/clean.mp4",
+  "comparison": "02_mid_arrival/comparison.jpg",
+  "failure_sha256": "64c8f5ae36835da05564b6684e6664311fca8d9fc2d629ef2d85fc452b31fc2a",
+  "clean_sha256": "cc689ed8d088b8726ffccacc682ad55eb0ddbd1b0b18bed841ee4467e17a675f",
+  "video_frames": {
+    "failure": 2500,
+    "clean": 952
+  }
+}

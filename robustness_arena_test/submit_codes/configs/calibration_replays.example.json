@@ -1,0 +1,54 @@
+{
+  "split": "train",
+  "trajectories": [
+    {
+      "file": "/path/to/official_training_demo.hdf5",
+      "group": "data/demo_0",
+      "task": 25,
+      "seed": 100,
+      "condition": "tv_on",
+      "sample_steps": [
+        60,
+        100
+      ],
+      "plan": {
+        "e": {
+          "b": "butter",
+          "c": "cream cheese"
+        },
+        "s": [
+          {
+            "d": "pick up the butter",
+            "t": "b",
+            "c": "butter held by gripper",
+            "e": "IS"
+          },
+          {
+            "d": "place butter on plate two",
+            "t": "b",
+            "c": "butter on plate two",
+            "e": "IPS"
+          },
+          {
+            "d": "pick up the cream cheese",
+            "t": "c",
+            "c": "cream cheese held by gripper",
+            "e": "IPS"
+          },
+          {
+            "d": "place cream cheese on plate two",
+            "t": "c",
+            "c": "both objects on plate two",
+            "e": "IPS"
+          }
+        ]
+      },
+      "stage_start_steps": [
+        0,
+        120,
+        240,
+        360
+      ]
+    }
+  ]
+}

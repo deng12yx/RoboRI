@@ -1,0 +1,54 @@
+<!doctype html><meta charset="utf-8"><title>RoboMemArena: ten perturbation failure examples</title>
+<style>body{max-width:1100px;margin:40px auto;font:16px system-ui}video{width:49%}img{max-width:100%}section{margin:42px 0}code{word-break:break-all}</style>
+<h1>RoboMemArena: ten recorded perturbation failure examples</h1>
+<p>Every pair has the same method, task, seed and initial scene hash. Clean succeeds; perturbed execution fails. These are legacy event recordings. Timing, geometry and transient duration differ from the paper defaults; they illustrate the event families and are not results of the new paper-configured evaluation.</p>
+<section><h2>01. onset_arrival — task 9, seed 52</h2>
+<p>Left: clean success. Right: perturbed failure.</p>
+<video controls preload="none" src="01_onset_arrival/clean.mp4"></video> <video controls preload="none" src="01_onset_arrival/failure.mp4"></video>
+<p>Incomplete native stages: 03_Pour_Two</p>
+<img loading="lazy" src="01_onset_arrival/comparison.jpg"></section>
+<section><h2>02. mid_arrival — task 21, seed 51</h2>
+<p>Left: clean success. Right: perturbed failure.</p>
+<video controls preload="none" src="02_mid_arrival/clean.mp4"></video> <video controls preload="none" src="02_mid_arrival/failure.mp4"></video>
+<p>Incomplete native stages: 03_Place_Chocolate_Microwave</p>
+<img loading="lazy" src="02_mid_arrival/comparison.jpg"></section>
+<section><h2>03. mid_shift — task 21, seed 51</h2>
+<p>Left: clean success. Right: perturbed failure.</p>
+<video controls preload="none" src="03_mid_shift/clean.mp4"></video> <video controls preload="none" src="03_mid_shift/failure.mp4"></video>
+<p>Incomplete native stages: 03_Place_Chocolate_Microwave</p>
+<img loading="lazy" src="03_mid_shift/comparison.jpg"></section>
+<section><h2>04. remove_return — task 9, seed 52</h2>
+<p>Left: clean success. Right: perturbed failure.</p>
+<video controls preload="none" src="04_remove_return/clean.mp4"></video> <video controls preload="none" src="04_remove_return/failure.mp4"></video>
+<p>Incomplete native stages: 03_Pour_Two</p>
+<img loading="lazy" src="04_remove_return/comparison.jpg"></section>
+<section><h2>05. tv_on — task 9, seed 52</h2>
+<p>Left: clean success. Right: perturbed failure.</p>
+<video controls preload="none" src="05_tv_on/clean.mp4"></video> <video controls preload="none" src="05_tv_on/failure.mp4"></video>
+<p>Incomplete native stages: 03_Pour_Two</p>
+<img loading="lazy" src="05_tv_on/comparison.jpg"></section>
+<section><h2>06. object_passby — task 9, seed 52</h2>
+<p>Left: clean success. Right: perturbed failure.</p>
+<video controls preload="none" src="06_object_passby/clean.mp4"></video> <video controls preload="none" src="06_object_passby/failure.mp4"></video>
+<p>Incomplete native stages: 03_Pour_Two</p>
+<img loading="lazy" src="06_object_passby/comparison.jpg"></section>
+<section><h2>07. unrelated_object — task 4, seed 51</h2>
+<p>Left: clean success. Right: perturbed failure.</p>
+<video controls preload="none" src="07_unrelated_object/clean.mp4"></video> <video controls preload="none" src="07_unrelated_object/failure.mp4"></video>
+<p>Incomplete native stages: 08_Put_Butter_Top_Drawer, 09_Close_Top_Drawer_Final</p>
+<img loading="lazy" src="07_unrelated_object/comparison.jpg"></section>
+<section><h2>08. target_like_object — task 4, seed 52</h2>
+<p>Left: clean success. Right: perturbed failure.</p>
+<video controls preload="none" src="08_target_like_object/clean.mp4"></video> <video controls preload="none" src="08_target_like_object/failure.mp4"></video>
+<p>Incomplete native stages: 08_Put_Butter_Top_Drawer, 09_Close_Top_Drawer_Final</p>
+<img loading="lazy" src="08_target_like_object/comparison.jpg"></section>
+<section><h2>09. camera_shake — task 9, seed 52</h2>
+<p>Left: clean success. Right: perturbed failure.</p>
+<video controls preload="none" src="09_camera_shake/clean.mp4"></video> <video controls preload="none" src="09_camera_shake/failure.mp4"></video>
+<p>Incomplete native stages: 03_Pour_Two</p>
+<img loading="lazy" src="09_camera_shake/comparison.jpg"></section>
+<section><h2>10. light_change — task 9, seed 52</h2>
+<p>Left: clean success. Right: perturbed failure.</p>
+<video controls preload="none" src="10_light_change/clean.mp4"></video> <video controls preload="none" src="10_light_change/failure.mp4"></video>
+<p>Incomplete native stages: 03_Pour_Two</p>
+<img loading="lazy" src="10_light_change/comparison.jpg"></section>

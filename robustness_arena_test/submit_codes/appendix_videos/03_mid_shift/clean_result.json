@@ -1,0 +1,96 @@
+{
+ "id": "t21_s51_mme_vla_clean",
+ "task": 21,
+ "seed": 51,
+ "mode": "mme_vla",
+ "method": "mme_vla",
+ "suite_category": "Occlusion",
+ "tier": "easy",
+ "status": "completed",
+ "error": null,
+ "worker": "1",
+ "vla_gpu": "4",
+ "vlm_gpu": "4",
+ "started_utc": "2026-10-22T02:37:13+00:00",
+ "finished_utc": "2026-10-22T02:38:15+00:00",
+ "prompt": "Put butter into the microwave and then put chocolate into the location where the butter was placed.",
+ "csr": 1.0,
+ "tsr": 1,
+ "stage_score_pct": 100.0,
+ "stage_done": {
+  "01_Open_Microwave": true,
+  "02_Place_Butter_Microwave": true,
+  "03_Place_Chocolate_Microwave": true
+ },
+ "diagnostics": {
+  "stage_success": true,
+  "extra_pour_detected": false,
+  "pour_1_step": null,
+  "pour_2_step": null,
+  "extra_monitor_end_step": null,
+  "failure_reason": null
+ },
+ "policy_steps": 952,
+ "env_steps": 962,
+ "wall_sec": 60.4133,
+ "init_state_sha1": "f1a38148f98f7b00de1bbd77f1e86e12e169ac67",
+ "reset_retries": 0,
+ "s1": {
+  "calls": 48,
+  "latency": {
+   "n": 48,
+   "median": 0.2377,
+   "p90": 0.4167,
+   "mean": 0.2915
+  },
+  "chunk_period": {
+   "n": 0
+  }
+ },
+ "s2": {
+  "calls": 0,
+  "errors": 0,
+  "latency": {
+   "n": 0
+  },
+  "update_period": {
+   "n": 0
+  },
+  "steps_between_updates": {
+   "n": 0
+  },
+  "staleness_steps": {
+   "n": 0
+  },
+  "s1_chunks_per_update": null
+ },
+ "memory": {
+  "max_K": 32,
+  "final_K": 0,
+  "calls_with_history": 47,
+  "candidate_frames": 0,
+  "final_keyframes": [],
+  "memory_frames_used_max": 32,
+  "memory_frames_stored_max": 941,
+  "memory_span_steps_max": 940
+ },
+ "primitives": [],
+ "prompt_switches": 0,
+ "stage_events": [
+  {
+   "t": 99,
+   "stage": "01_Open_Microwave",
+   "wall": 17.6031
+  },
+  {
+   "t": 361,
+   "stage": "02_Place_Butter_Microwave",
+   "wall": 29.8691
+  },
+  {
+   "t": 761,
+   "stage": "03_Place_Chocolate_Microwave",
+   "wall": 49.2703
+  }
+ ]
+}
