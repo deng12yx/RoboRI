@@ -2,6 +2,8 @@
 
 This submission contains only RoboMemArena. The protocol follows `../papers/Robo_RI_CVPR27.pdf` (main paper §§3–5) and `../papers/Robo_RI_CVPR27_supplement.pdf` (§§1–2, Tables 1–3). Clean is a separate control, not one of the ten perturbations. No `late`, `onset_delay`, `arrive_late`, or `takeback_late` conditions enter a run.
 
+[IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md) maps all seven Arena baselines to the ten perturbations and documents the two Arena RI-Mem integrations. The paper's third RI-Mem backbone, TokenDrop+Mod, belongs only to RoboMME. No ablation experiments are included.
+
 ## Layout
 
 ```text

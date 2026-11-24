@@ -5,7 +5,8 @@
     "simplemem_native": "Native Qwen3.5 full-attention layers 27/31: zero-bias identity; 35 head parameters update with frozen mock action policy; pretrained VLA weights not used in this unit check",
     "catalog": "26 task profiles match BDDL objects and native scorer",
     "notebook": "17 cells executed; 13 code cells; 10 embedded comparison images",
-    "note": "These checks are not task success measurements"
+    "note": "These checks are not task success measurements",
+    "implementation_coverage": "Seven paper Arena baselines \u00d7 ten perturbations configured; FS+Mod and SimpleMemVLA RI-Mem variants; English comments/docstrings/notebook explanations checked. This is not a pretrained rollout result."
   },
   "physics": {
     "type": "mechanics_test_only",
@@ -555,5 +556,164 @@
     "Full nine-method paper-scale evaluation not run.",
     "RI-Mem paired collection and calibration implemented; pretrained calibrated head checkpoints are not supplied or claimed.",
     "Ten appendix pairs are historical recordings; parameters differ from paper defaults."
-  ]
+  ],
+  "implementation_coverage": {
+    "check_type": "configuration_and_comment_audit",
+    "passed": true,
+    "paper_sha256": {
+      "Robo_RI_CVPR27.pdf": "611d8cb7b512fe3974d77939eb872a304f40beae9725ce779235353ac93d81e0",
+      "Robo_RI_CVPR27_supplement.pdf": "748640efa3b32cc86a8953ba2cee66a2a1a22e38eecff6aadbdefbad2415861f"
+    },
+    "paper_scope": "Main paper Table 3; supplement sections 2.2 and 2.3",
+    "baseline_count": 7,
+    "perturbation_count": 10,
+    "baseline_perturbation_combinations": 70,
+    "ri_methods": [
+      "fs_mod_ri",
+      "simplememvla_ri"
+    ],
+    "excluded_from_arena": {
+      "td_mod_ri": "The paper evaluates TokenDrop+Mod RI-Mem only on RoboMME."
+    },
+    "methods": {
+      "fs_mod": {
+        "clean": 1326,
+        "perturbations": {
+          "onset_arrival": 1326,
+          "mid_arrival": 1326,
+          "mid_shift": 1326,
+          "remove_return": 1326,
+          "tv_on": 1326,
+          "object_passby": 1326,
+          "unrelated_object": 1326,
+          "target_like_object": 1326,
+          "camera_shake": 1326,
+          "light_change": 1326
+        }
+      },
+      "simplememvla": {
+        "clean": 1326,
+        "perturbations": {
+          "onset_arrival": 1326,
+          "mid_arrival": 1326,
+          "mid_shift": 1326,
+          "remove_return": 1326,
+          "tv_on": 1326,
+          "object_passby": 1326,
+          "unrelated_object": 1326,
+          "target_like_object": 1326,
+          "camera_shake": 1326,
+          "light_change": 1326
+        }
+      },
+      "traceflow": {
+        "clean": 1326,
+        "perturbations": {
+          "onset_arrival": 1326,
+          "mid_arrival": 1326,
+          "mid_shift": 1326,
+          "remove_return": 1326,
+          "tv_on": 1326,
+          "object_passby": 1326,
+          "unrelated_object": 1326,
+          "target_like_object": 1326,
+          "camera_shake": 1326,
+          "light_change": 1326
+        }
+      },
+      "memer": {
+        "clean": 1326,
+        "perturbations": {
+          "onset_arrival": 1326,
+          "mid_arrival": 1326,
+          "mid_shift": 1326,
+          "remove_return": 1326,
+          "tv_on": 1326,
+          "object_passby": 1326,
+          "unrelated_object": 1326,
+          "target_like_object": 1326,
+          "camera_shake": 1326,
+          "light_change": 1326
+        }
+      },
+      "predimem": {
+        "clean": 1326,
+        "perturbations": {
+          "onset_arrival": 1326,
+          "mid_arrival": 1326,
+          "mid_shift": 1326,
+          "remove_return": 1326,
+          "tv_on": 1326,
+          "object_passby": 1326,
+          "unrelated_object": 1326,
+          "target_like_object": 1326,
+          "camera_shake": 1326,
+          "light_change": 1326
+        }
+      },
+      "fs_mod_retrieval": {
+        "clean": 1326,
+        "perturbations": {
+          "onset_arrival": 1326,
+          "mid_arrival": 1326,
+          "mid_shift": 1326,
+          "remove_return": 1326,
+          "tv_on": 1326,
+          "object_passby": 1326,
+          "unrelated_object": 1326,
+          "target_like_object": 1326,
+          "camera_shake": 1326,
+          "light_change": 1326
+        }
+      },
+      "pi05": {
+        "clean": 1326,
+        "perturbations": {
+          "onset_arrival": 1326,
+          "mid_arrival": 1326,
+          "mid_shift": 1326,
+          "remove_return": 1326,
+          "tv_on": 1326,
+          "object_passby": 1326,
+          "unrelated_object": 1326,
+          "target_like_object": 1326,
+          "camera_shake": 1326,
+          "light_change": 1326
+        }
+      },
+      "fs_mod_ri": {
+        "clean": 1326,
+        "perturbations": {
+          "onset_arrival": 1326,
+          "mid_arrival": 1326,
+          "mid_shift": 1326,
+          "remove_return": 1326,
+          "tv_on": 1326,
+          "object_passby": 1326,
+          "unrelated_object": 1326,
+          "target_like_object": 1326,
+          "camera_shake": 1326,
+          "light_change": 1326
+        }
+      },
+      "simplememvla_ri": {
+        "clean": 1326,
+        "perturbations": {
+          "onset_arrival": 1326,
+          "mid_arrival": 1326,
+          "mid_shift": 1326,
+          "remove_return": 1326,
+          "tv_on": 1326,
+          "object_passby": 1326,
+          "unrelated_object": 1326,
+          "target_like_object": 1326,
+          "camera_shake": 1326,
+          "light_change": 1326
+        }
+      }
+    },
+    "comment_language": "English; no CJK comments, docstrings, or notebook explanations found",
+    "full_pretrained_rollouts_verified": false,
+    "note": "This audit checks implementation configuration, not measured success or native model execution."
+  }
 }

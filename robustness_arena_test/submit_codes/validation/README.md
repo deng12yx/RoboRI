@@ -5,6 +5,7 @@ The artifacts in this directory have different purposes; they must not be pooled
 | Artifact | What it verifies |
 |---|---|
 | `checks.json` | Recorded software checks: 13 unit tests, native attention integration, task catalog, executed notebook. |
+| `implementation_coverage.json` | Seven-baseline / ten-condition configuration audit and English comment/docstring/notebook checks; not a pretrained rollout test. |
 | `physics/summary.json` | All ten event types in a real MuJoCo Arena task-25 environment. Scripted stage/pose triggers exercise the event mechanics; no learned policy is used. |
 | `physics_seed51/summary.json` | Additional removal subtypes and dark illumination variant. |
 | `catalog.json` | All 26 profiles' object names resolve in native BDDL and each task has a native scorer. |
