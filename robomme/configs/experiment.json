@@ -1,0 +1,255 @@
+{
+  "benchmark": "robomme",
+  "model_seed": 7,
+  "max_steps": 1300,
+  "exec_horizon": 16,
+  "save_video": true,
+  "python_paths": [
+    "${LAPSE_ROOT}/robomme_policy_learning/src",
+    "${LAPSE_ROOT}/robomme_policy_learning/packages/openpi-client/src",
+    "${LAPSE_ROOT}/robomme_policy_learning/examples/robomme",
+    "${LAPSE_ROOT}/robomme_benchmark/src",
+    "${LAPSE_ROOT}/SimpleMemVLA",
+    "${LAPSE_ROOT}/HAMLET-Isaac-GR00T"
+  ],
+  "policies": {
+    "framesamp-context": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-framesamp-context/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "framesamp-modul": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-framesamp-modul/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "framesamp-expert": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-framesamp-expert/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "oft-framesamp-context": {
+      "endpoint": "http://127.0.0.1:8801",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "tokendrop-context": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-tokendrop-context/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "tokendrop-modul": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-tokendrop-modul/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "tokendrop-expert": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-tokendrop-expert/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "oft-tokendrop-context": {
+      "endpoint": "http://127.0.0.1:8802",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "retrieval-fs-mod": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-framesamp-modul/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "retrieval_encoder": "${MODEL_ROOT}/siglip-so400m-patch14-384"
+    },
+    "simplesg-qwen": {
+      "checkpoint": "${MODEL_ROOT}/symbolic-simple-subgoal/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "subgoal_adapter": "${MODEL_ROOT}/vlm_subgoal_predictor/qwenvl/simple_subgoal/checkpoint-1400",
+      "qwen_model": "${QWEN_MODEL}"
+    },
+    "simplesg-oracle": {
+      "checkpoint": "${MODEL_ROOT}/symbolic-simple-subgoal/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "oft-simplesg-qwen": {
+      "endpoint": "http://127.0.0.1:8803",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "subgoal_adapter": "${MODEL_ROOT}/vlm_subgoal_predictor/qwenvl/simple_subgoal/checkpoint-1400",
+      "qwen_model": "${QWEN_MODEL}"
+    },
+    "groundedsg-qwen": {
+      "checkpoint": "${MODEL_ROOT}/symbolic-grounded-subgoal/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "subgoal_adapter": "${MODEL_ROOT}/vlm_subgoal_predictor/qwenvl/grounded_subgoal/checkpoint-1400",
+      "qwen_model": "${QWEN_MODEL}"
+    },
+    "groundedsg-oracle": {
+      "checkpoint": "${MODEL_ROOT}/symbolic-grounded-subgoal/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "oft-groundedsg-qwen": {
+      "endpoint": "http://127.0.0.1:8804",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "subgoal_adapter": "${MODEL_ROOT}/vlm_subgoal_predictor/qwenvl/grounded_subgoal/checkpoint-1400",
+      "qwen_model": "${QWEN_MODEL}"
+    },
+    "ttt-context": {
+      "checkpoint": "${MODEL_ROOT}/recurrent-ttt-context/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "ttt-expert": {
+      "checkpoint": "${MODEL_ROOT}/recurrent-ttt-expert/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "simplememvla": {
+      "checkpoint": "${MODEL_ROOT}/others/simplememvla_robomme",
+      "python": "${LAPSE_ROOT}/.venv-simplememvla/bin/python"
+    },
+    "sam2act-plus": {
+      "endpoint": "ws://127.0.0.1:8805",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "exec_horizon": 1
+    },
+    "hamlet": {
+      "endpoint": "ws://127.0.0.1:8806",
+      "python": "${LAPSE_ROOT}/HAMLET-Isaac-GR00T/.venv/bin/python",
+      "host": "127.0.0.1",
+      "port": 8806
+    },
+    "memoryvla": {
+      "endpoint": "ws://127.0.0.1:8807",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "exec_horizon": 8
+    },
+    "memer": {
+      "checkpoint": "${MODEL_ROOT}/symbolic-grounded-subgoal/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "subgoal_adapter": "${MODEL_ROOT}/vlm_subgoal_predictor/memer/grounded_subgoal/checkpoint-1300",
+      "qwen_model": "${QWEN_MODEL}"
+    },
+    "ponderpounce": {
+      "endpoint": "ws://127.0.0.1:8808",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "service_contract": "robomme-challenge-v1",
+      "official_adapter_required": true
+    },
+    "pi05": {
+      "checkpoint": "${MODEL_ROOT}/pi05_baseline/pi05_baseline/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "sam2act": {
+      "endpoint": "ws://127.0.0.1:8809",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "exec_horizon": 1
+    },
+    "diffusion-policy": {
+      "endpoint": "ws://127.0.0.1:8810",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "exec_horizon": 8
+    },
+    "smolvla": {
+      "endpoint": "http://127.0.0.1:8811",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "exec_horizon": 50
+    },
+    "openvla-oft": {
+      "endpoint": "http://127.0.0.1:8812",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "framesamp-modul+ri-mem": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-framesamp-modul/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "head": "${SUBMIT_ROOT}/checkpoints/framesamp-modul.npz",
+      "qwen_model": "${QWEN_MODEL}",
+      "qwen_device": "cuda:0",
+      "plan_cache": "${SUBMIT_ROOT}/outputs/scq_plans",
+      "ablation": "full"
+    },
+    "tokendrop-modul+ri-mem": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-tokendrop-modul/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python",
+      "head": "${SUBMIT_ROOT}/checkpoints/tokendrop-modul.npz",
+      "qwen_model": "${QWEN_MODEL}",
+      "qwen_device": "cuda:0",
+      "plan_cache": "${SUBMIT_ROOT}/outputs/scq_plans",
+      "ablation": "full"
+    },
+    "simplememvla+ri-mem": {
+      "checkpoint": "${MODEL_ROOT}/others/simplememvla_robomme",
+      "python": "${LAPSE_ROOT}/.venv-simplememvla/bin/python",
+      "head": "${SUBMIT_ROOT}/checkpoints/simplememvla.npz",
+      "qwen_model": "${QWEN_MODEL}",
+      "qwen_device": "cuda:0",
+      "plan_cache": "${SUBMIT_ROOT}/outputs/scq_plans",
+      "ablation": "full"
+    },
+    "framesamp-modul+no-history": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-framesamp-modul/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "framesamp-modul+shuffled-history": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-framesamp-modul/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "framesamp-modul+oracle-mem": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-framesamp-modul/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "tokendrop-modul+no-history": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-tokendrop-modul/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "tokendrop-modul+shuffled-history": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-tokendrop-modul/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "tokendrop-modul+oracle-mem": {
+      "checkpoint": "${MODEL_ROOT}/perceptual-tokendrop-modul/79999",
+      "python": "${LAPSE_ROOT}/robomme_policy_learning/.venv/bin/python"
+    },
+    "simplememvla+no-history": {
+      "checkpoint": "${MODEL_ROOT}/others/simplememvla_robomme",
+      "python": "${LAPSE_ROOT}/.venv-simplememvla/bin/python"
+    },
+    "simplememvla+shuffled-history": {
+      "checkpoint": "${MODEL_ROOT}/others/simplememvla_robomme",
+      "python": "${LAPSE_ROOT}/.venv-simplememvla/bin/python"
+    },
+    "simplememvla+oracle-mem": {
+      "checkpoint": "${MODEL_ROOT}/others/simplememvla_robomme",
+      "python": "${LAPSE_ROOT}/.venv-simplememvla/bin/python"
+    }
+  },
+  "methods": [
+    "pi05",
+    "framesamp-context",
+    "framesamp-modul",
+    "tokendrop-context",
+    "tokendrop-modul",
+    "retrieval-fs-mod",
+    "simplememvla",
+    "memer",
+    "ttt-context",
+    "simplesg-qwen",
+    "groundedsg-qwen",
+    "sam2act-plus",
+    "memoryvla",
+    "hamlet",
+    "framesamp-modul+ri-mem",
+    "tokendrop-modul+ri-mem",
+    "simplememvla+ri-mem"
+  ],
+  "tasks": [
+    "BinFill",
+    "PickXtimes",
+    "ButtonUnmaskSwap",
+    "VideoPlaceOrder"
+  ],
+  "episodes": [
+    0,
+    2,
+    3
+  ],
+  "conditions": [
+    "clean",
+    "onset_arrival",
+    "mid_arrival",
+    "shift",
+    "remove_return",
+    "tv",
+    "passby",
+    "unrelated",
+    "target_like",
+    "camera",
+    "light"
+  ]
+}

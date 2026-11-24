@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robomme-ri"
+version = "0.1.0"
+description = "RoboMME-RI perturbations and unified RI-Mem memory readout"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+notebook = ["nbformat", "nbclient", "ipykernel", "pandas", "matplotlib", "pillow", "imageio[ffmpeg]"]
+test = ["pytest", "torch", "opencv-python-headless"]
+vlm = ["torch", "transformers>=4.57", "pillow"]
+clients = ["requests", "websockets", "msgpack", "opencv-python-headless", "scipy"]
+
+[project.scripts]
+robomme-ri = "robomme_ri.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["robomme_ri*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
